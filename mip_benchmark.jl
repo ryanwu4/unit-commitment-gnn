@@ -11,7 +11,7 @@ if !isdir(solutions_dir)
 end
 
 # Get all available dates from the case118_data directory
-data_dir = "case118_data"
+data_dir = "data/case118_data"
 json_files = filter(f -> endswith(f, ".json"), readdir(data_dir))
 dates = sort([replace(f, ".json" => "") for f in json_files])
 
@@ -44,7 +44,7 @@ for (idx, date_str) in enumerate(dates)
         )
         
         # Optimize
-        UnitCommitment.optimize!(model)
+        UnitCommitment.optimize!(model, UnitCommitment.XavQiuWanThi2019.Method(time_limit = 300.0))
         
         # Get solution
         solution = UnitCommitment.solution(model)
