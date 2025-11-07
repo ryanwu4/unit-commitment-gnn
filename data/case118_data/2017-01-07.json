@@ -1,0 +1,8129 @@
+{
+  "SOURCE": "- University of Washington, Dept. of Electrical Engineering. \"Power Systems Test Case Archive\". Available at: http://www.ee.washington.edu/research/pstca/ (Accessed: Nov 14, 2020)\n\n- D. Zimmerman, C. E. Murillo-Sandnchez and R. J. Thomas. \"Matpower: Steady-state operations, planning, and analysis tools forpower systems research and education\", IEEE Transactions on PowerSystems, vol. 26, no. 1, pp. 12 \u201319, Feb. 2011. DOI: 10.1109/TPWRS.2010.2051168\n\n- A. S. Xavier, A. M. Kazachkov, O. Yurdakul, F. Qiu. \"UnitCommitment.jl: A Julia/JuMP Optimization Package for Security-Constrained Unit Commitment (Version 0.3)\". Zenodo (2022). DOI: 10.5281/zenodo.4269874\n",
+  "Parameters": {
+    "Version": "0.3",
+    "Power balance penalty ($/MW)": 1000.0,
+    "Time horizon (h)": 36
+  },
+  "Generators": {
+    "g1": {
+      "Bus": "b1",
+      "Production cost curve (MW)": [
+        8.214242756471863,
+        28.739918741047184,
+        49.2655947256225,
+        69.79127071019782,
+        90.31694669477314
+      ],
+      "Production cost curve ($)": [
+        832.3296133000817,
+        1403.665261426274,
+        2006.7717309602863,
+        3195.919973665926,
+        5051.3413013195495
+      ],
+      "Startup costs ($)": [
+        7152.95,
+        8486.0,
+        9568.11
+      ],
+      "Startup delays (h)": [
+        1,
+        2,
+        4
+      ],
+      "Ramp up limit (MW)": 63.22,
+      "Ramp down limit (MW)": 63.22,
+      "Startup limit (MW)": 63.22,
+      "Shutdown limit (MW)": 63.22,
+      "Minimum uptime (h)": 1,
+      "Minimum downtime (h)": 1,
+      "Reserve eligibility": [
+        "r1"
+      ],
+      "Initial status (h)": 24,
+      "Initial power (MW)": 90.31694669477223
+    },
+    "g2": {
+      "Bus": "b4",
+      "Production cost curve (MW)": [
+        4.146103244704548,
+        26.075557966085107,
+        48.00501268746565,
+        69.93446740884622,
+        91.86392213022674
+      ],
+      "Production cost curve ($)": [
+        656.3196735178885,
+        1265.2011473214734,
+        1907.3817553209926,
+        3170.0800588027596,
+        5140.518626705553
+      ],
+      "Startup costs ($)": [
+        5756.82,
+        6595.74,
+        6706.7
+      ],
+      "Startup delays (h)": [
+        1,
+        2,
+        4
+      ],
+      "Ramp up limit (MW)": 64.3,
+      "Ramp down limit (MW)": 64.3,
+      "Startup limit (MW)": 64.3,
+      "Shutdown limit (MW)": 64.3,
+      "Minimum uptime (h)": 1,
+      "Minimum downtime (h)": 1,
+      "Reserve eligibility": [
+        "r1"
+      ],
+      "Initial status (h)": 24,
+      "Initial power (MW)": 91.86392213022674
+    },
+    "g3": {
+      "Bus": "b6",
+      "Production cost curve (MW)": [
+        3.0933311497589737,
+        25.970581815265447,
+        48.84783248077192,
+        71.72508314627838,
+        94.60233381178486
+      ],
+      "Production cost curve ($)": [
+        628.0962160032989,
+        1247.9929294621693,
+        1915.3917774546926,
+        3514.153886771759,
+        6171.623545295022
+      ],
+      "Startup costs ($)": [
+        4630.17,
+        5282.65,
+        5347.94
+      ],
+      "Startup delays (h)": [
+        1,
+        2,
+        4
+      ],
+      "Ramp up limit (MW)": 66.22,
+      "Ramp down limit (MW)": 66.22,
+      "Startup limit (MW)": 66.22,
+      "Shutdown limit (MW)": 66.22,
+      "Minimum uptime (h)": 1,
+      "Minimum downtime (h)": 1,
+      "Reserve eligibility": [
+        "r1"
+      ],
+      "Initial status (h)": -24,
+      "Initial power (MW)": 0.0
+    },
+    "g4": {
+      "Bus": "b8",
+      "Production cost curve (MW)": [
+        3.1101733728127994,
+        26.273058157769462,
+        49.435942942726136,
+        72.5988277276828,
+        95.76171251263948
+      ],
+      "Production cost curve ($)": [
+        722.2899268996222,
+        1360.8614236201383,
+        2034.3740718376325,
+        3393.2790002832908,
+        5543.712761704121
+      ],
+      "Startup costs ($)": [
+        4428.13,
+        5043.4,
+        5355.17
+      ],
+      "Startup delays (h)": [
+        4,
+        8,
+        16
+      ],
+      "Ramp up limit (MW)": 67.03,
+      "Ramp down limit (MW)": 67.03,
+      "Startup limit (MW)": 67.03,
+      "Shutdown limit (MW)": 67.03,
+      "Minimum uptime (h)": 4,
+      "Minimum downtime (h)": 4,
+      "Reserve eligibility": [
+        "r1"
+      ],
+      "Initial status (h)": 24,
+      "Initial power (MW)": 95.76171251263948
+    },
+    "g5": {
+      "Bus": "b10",
+      "Production cost curve (MW)": [
+        0.0,
+        137.5,
+        275.0,
+        412.5,
+        550.0
+      ],
+      "Production cost curve ($)": [
+        800.2454593276559,
+        23638.955051145,
+        50552.279581807146,
+        77485.73106414548,
+        104419.18254648379
+      ],
+      "Startup costs ($)": [
+        5977.1,
+        6008.81,
+        6008.81
+      ],
+      "Startup delays (h)": [
+        1,
+        2,
+        4
+      ],
+      "Ramp up limit (MW)": 385.0,
+      "Ramp down limit (MW)": 385.0,
+      "Startup limit (MW)": 385.0,
+      "Shutdown limit (MW)": 385.0,
+      "Minimum uptime (h)": 1,
+      "Minimum downtime (h)": 1,
+      "Reserve eligibility": [
+        "r1"
+      ],
+      "Initial status (h)": 24,
+      "Initial power (MW)": 0.0
+    },
+    "g6": {
+      "Bus": "b12",
+      "Production cost curve (MW)": [
+        37.15388189985525,
+        70.48331897008167,
+        103.81275604030814,
+        137.14219311053458,
+        170.47163018076103
+      ],
+      "Production cost curve ($)": [
+        3823.2512810427443,
+        4839.217317394718,
+        5884.559005777485,
+        7519.043516975586,
+        9960.18434539778
+      ],
+      "Startup costs ($)": [
+        12934.26,
+        12938.6,
+        14635.62
+      ],
+      "Startup delays (h)": [
+        2,
+        4,
+        8
+      ],
+      "Ramp up limit (MW)": 119.33,
+      "Ramp down limit (MW)": 119.33,
+      "Startup limit (MW)": 119.33,
+      "Shutdown limit (MW)": 119.33,
+      "Minimum uptime (h)": 2,
+      "Minimum downtime (h)": 2,
+      "Reserve eligibility": [
+        "r1"
+      ],
+      "Initial status (h)": 24,
+      "Initial power (MW)": 65.93953532927381
+    },
+    "g7": {
+      "Bus": "b15",
+      "Production cost curve (MW)": [
+        3.4825828665845644,
+        25.7392491305498,
+        47.995915394515045,
+        70.25258165848027,
+        92.50924792244551
+      ],
+      "Production cost curve ($)": [
+        722.5498996420868,
+        1328.0776042483026,
+        1976.5973883736683,
+        3489.9799127116485,
+        5989.616094824372
+      ],
+      "Startup costs ($)": [
+        4885.23,
+        5312.53,
+        5860.89
+      ],
+      "Startup delays (h)": [
+        4,
+        8,
+        16
+      ],
+      "Ramp up limit (MW)": 64.76,
+      "Ramp down limit (MW)": 64.76,
+      "Startup limit (MW)": 64.76,
+      "Shutdown limit (MW)": 64.76,
+      "Minimum uptime (h)": 4,
+      "Minimum downtime (h)": 4,
+      "Reserve eligibility": [
+        "r1"
+      ],
+      "Initial status (h)": -24,
+      "Initial power (MW)": 0.0
+    },
+    "g8": {
+      "Bus": "b18",
+      "Production cost curve (MW)": [
+        4.166583450093777,
+        26.48335730148838,
+        48.80013115288299,
+        71.11690500427761,
+        93.43367885567221
+      ],
+      "Production cost curve ($)": [
+        815.442070092696,
+        1445.1053605866598,
+        2096.532480148173,
+        3163.237244226313,
+        4718.80324862077
+      ],
+      "Startup costs ($)": [
+        5725.5,
+        6325.77,
+        6951.35
+      ],
+      "Startup delays (h)": [
+        1,
+        2,
+        4
+      ],
+      "Ramp up limit (MW)": 65.4,
+      "Ramp down limit (MW)": 65.4,
+      "Startup limit (MW)": 65.4,
+      "Shutdown limit (MW)": 65.4,
+      "Minimum uptime (h)": 1,
+      "Minimum downtime (h)": 1,
+      "Reserve eligibility": [
+        "r1"
+      ],
+      "Initial status (h)": 24,
+      "Initial power (MW)": 93.43367885567221
+    },
+    "g9": {
+      "Bus": "b19",
+      "Production cost curve (MW)": [
+        10.062081622613519,
+        29.787092409667977,
+        49.512103196722435,
+        69.23711398377688,
+        88.96212477083135
+      ],
+      "Production cost curve ($)": [
+        991.1557944876508,
+        1550.6588503469718,
+        2126.8590300871138,
+        3010.0258056819457,
+        4253.925716338841
+      ],
+      "Startup costs ($)": [
+        7165.85,
+        8265.4,
+        9830.01
+      ],
+      "Startup delays (h)": [
+        2,
+        4,
+        8
+      ],
+      "Ramp up limit (MW)": 62.27,
+      "Ramp down limit (MW)": 62.27,
+      "Startup limit (MW)": 62.27,
+      "Shutdown limit (MW)": 62.27,
+      "Minimum uptime (h)": 2,
+      "Minimum downtime (h)": 2,
+      "Reserve eligibility": [
+        "r1"
+      ],
+      "Initial status (h)": 24,
+      "Initial power (MW)": 88.96212477083135
+    },
+    "g10": {
+      "Bus": "b24",
+      "Production cost curve (MW)": [
+        4.6447998607021015,
+        26.567552155044694,
+        48.490304449387295,
+        70.41305674372991,
+        92.33580903807247
+      ],
+      "Production cost curve ($)": [
+        831.6021377918331,
+        1467.4254179215459,
+        2112.58507810621,
+        2889.603994480601,
+        3834.941566846262
+      ],
+      "Startup costs ($)": [
+        7590.64,
+        8411.86,
+        9029.45
+      ],
+      "Startup delays (h)": [
+        2,
+        4,
+        8
+      ],
+      "Ramp up limit (MW)": 64.64,
+      "Ramp down limit (MW)": 64.64,
+      "Startup limit (MW)": 64.64,
+      "Shutdown limit (MW)": 64.64,
+      "Minimum uptime (h)": 2,
+      "Minimum downtime (h)": 2,
+      "Reserve eligibility": [
+        "r1"
+      ],
+      "Initial status (h)": 24,
+      "Initial power (MW)": 92.33580903807247
+    },
+    "g11": {
+      "Bus": "b25",
+      "Production cost curve (MW)": [
+        70.52899750866476,
+        131.75559493595148,
+        192.9821923632382,
+        254.2087897905249,
+        315.4353872178117
+      ],
+      "Production cost curve ($)": [
+        5630.938484365506,
+        7931.242569658358,
+        10562.88014433234,
+        13240.41514628618,
+        16303.189921648951
+      ],
+      "Startup costs ($)": [
+        25120.44,
+        28439.02,
+        34142.34
+      ],
+      "Startup delays (h)": [
+        2,
+        4,
+        8
+      ],
+      "Ramp up limit (MW)": 220.8,
+      "Ramp down limit (MW)": 220.8,
+      "Startup limit (MW)": 220.8,
+      "Shutdown limit (MW)": 220.8,
+      "Minimum uptime (h)": 2,
+      "Minimum downtime (h)": 2,
+      "Reserve eligibility": [
+        "r1"
+      ],
+      "Initial status (h)": 24,
+      "Initial power (MW)": 315.4353872178117
+    },
+    "g12": {
+      "Bus": "b26",
+      "Production cost curve (MW)": [
+        21.535401322908005,
+        119.65155099218101,
+        217.767700661454,
+        315.883850330727,
+        414.0
+      ],
+      "Production cost curve ($)": [
+        1007.0782370215707,
+        14438.497475511309,
+        29170.3004975771,
+        43929.77600582439,
+        58761.197537008804
+      ],
+      "Startup costs ($)": [
+        4616.83,
+        4886.46,
+        5099.33
+      ],
+      "Startup delays (h)": [
+        4,
+        8,
+        16
+      ],
+      "Ramp up limit (MW)": 289.8,
+      "Ramp down limit (MW)": 289.8,
+      "Startup limit (MW)": 289.8,
+      "Shutdown limit (MW)": 289.8,
+      "Minimum uptime (h)": 4,
+      "Minimum downtime (h)": 4,
+      "Reserve eligibility": [
+        "r1"
+      ],
+      "Initial status (h)": -24,
+      "Initial power (MW)": 0.0
+    },
+    "g13": {
+      "Bus": "b27",
+      "Production cost curve (MW)": [
+        6.566436352075572,
+        26.96704455179203,
+        47.36765275150848,
+        67.76826095122496,
+        88.1688691509414
+      ],
+      "Production cost curve ($)": [
+        847.6240129323876,
+        1439.7012392368756,
+        2036.334275676652,
+        2675.27317977004,
+        3379.9204937988934
+      ],
+      "Startup costs ($)": [
+        6992.04,
+        7919.39,
+        8828.84
+      ],
+      "Startup delays (h)": [
+        4,
+        8,
+        16
+      ],
+      "Ramp up limit (MW)": 61.72,
+      "Ramp down limit (MW)": 61.72,
+      "Startup limit (MW)": 61.72,
+      "Shutdown limit (MW)": 61.72,
+      "Minimum uptime (h)": 4,
+      "Minimum downtime (h)": 4,
+      "Reserve eligibility": [
+        "r1"
+      ],
+      "Initial status (h)": 24,
+      "Initial power (MW)": 88.1688691509414
+    },
+    "g14": {
+      "Bus": "b31",
+      "Production cost curve (MW)": [
+        4.185807869018688,
+        29.698276927043736,
+        55.21074598506878,
+        80.72321504309383,
+        106.23568410111888
+      ],
+      "Production cost curve ($)": [
+        750.1638573337182,
+        1557.5292170150312,
+        2412.402747789019,
+        3984.871656110643,
+        6401.923869130901
+      ],
+      "Startup costs ($)": [
+        5054.79,
+        6124.37,
+        6260.64
+      ],
+      "Startup delays (h)": [
+        2,
+        4,
+        8
+      ],
+      "Ramp up limit (MW)": 74.36,
+      "Ramp down limit (MW)": 74.36,
+      "Startup limit (MW)": 74.36,
+      "Shutdown limit (MW)": 74.36,
+      "Minimum uptime (h)": 2,
+      "Minimum downtime (h)": 2,
+      "Reserve eligibility": [
+        "r1"
+      ],
+      "Initial status (h)": -24,
+      "Initial power (MW)": 0.0
+    },
+    "g15": {
+      "Bus": "b32",
+      "Production cost curve (MW)": [
+        10.451872063663041,
+        30.125323246394682,
+        49.79877442912633,
+        69.47222561185798,
+        89.14567679458962
+      ],
+      "Production cost curve ($)": [
+        1012.0060599767797,
+        1575.8523478556,
+        2144.196017428299,
+        2778.039059555514,
+        3510.254130868465
+      ],
+      "Startup costs ($)": [
+        5591.73,
+        6785.95,
+        8380.67
+      ],
+      "Startup delays (h)": [
+        2,
+        4,
+        8
+      ],
+      "Ramp up limit (MW)": 62.4,
+      "Ramp down limit (MW)": 62.4,
+      "Startup limit (MW)": 62.4,
+      "Shutdown limit (MW)": 62.4,
+      "Minimum uptime (h)": 2,
+      "Minimum downtime (h)": 2,
+      "Reserve eligibility": [
+        "r1"
+      ],
+      "Initial status (h)": 24,
+      "Initial power (MW)": 89.14567679458962
+    },
+    "g16": {
+      "Bus": "b34",
+      "Production cost curve (MW)": [
+        6.0094731215927375,
+        27.57228712918314,
+        49.13510113677354,
+        70.69791514436395,
+        92.26072915195434
+      ],
+      "Production cost curve ($)": [
+        813.6048448914182,
+        1411.1772469588213,
+        2040.2748435373244,
+        3274.2586360053683,
+        5202.836884863131
+      ],
+      "Startup costs ($)": [
+        5992.16,
+        6919.68,
+        7770.31
+      ],
+      "Startup delays (h)": [
+        1,
+        2,
+        4
+      ],
+      "Ramp up limit (MW)": 64.58,
+      "Ramp down limit (MW)": 64.58,
+      "Startup limit (MW)": 64.58,
+      "Shutdown limit (MW)": 64.58,
+      "Minimum uptime (h)": 1,
+      "Minimum downtime (h)": 1,
+      "Reserve eligibility": [
+        "r1"
+      ],
+      "Initial status (h)": 24,
+      "Initial power (MW)": 92.26072915195434
+    },
+    "g17": {
+      "Bus": "b36",
+      "Production cost curve (MW)": [
+        7.981083518039182,
+        29.01064151643765,
+        50.04019951483612,
+        71.06975751323459,
+        92.09931551163302
+      ],
+      "Production cost curve ($)": [
+        892.667700226567,
+        1473.2583484242687,
+        2080.8183811016197,
+        3211.0087707517914,
+        4947.983074488655
+      ],
+      "Startup costs ($)": [
+        5006.68,
+        6106.15,
+        7285.48
+      ],
+      "Startup delays (h)": [
+        1,
+        2,
+        4
+      ],
+      "Ramp up limit (MW)": 64.47,
+      "Ramp down limit (MW)": 64.47,
+      "Startup limit (MW)": 64.47,
+      "Shutdown limit (MW)": 64.47,
+      "Minimum uptime (h)": 1,
+      "Minimum downtime (h)": 1,
+      "Reserve eligibility": [
+        "r1"
+      ],
+      "Initial status (h)": 24,
+      "Initial power (MW)": 92.09931551163302
+    },
+    "g18": {
+      "Bus": "b40",
+      "Production cost curve (MW)": [
+        5.053788072078921,
+        27.217968138694427,
+        49.38214820530993,
+        71.54632827192545,
+        93.71050833854096
+      ],
+      "Production cost curve ($)": [
+        708.4707299023606,
+        1314.7529951831357,
+        1958.1479101417603,
+        3315.149839283881,
+        5489.590965659044
+      ],
+      "Startup costs ($)": [
+        4409.02,
+        5394.2,
+        5785.57
+      ],
+      "Startup delays (h)": [
+        2,
+        4,
+        8
+      ],
+      "Ramp up limit (MW)": 65.6,
+      "Ramp down limit (MW)": 65.6,
+      "Startup limit (MW)": 65.6,
+      "Shutdown limit (MW)": 65.6,
+      "Minimum uptime (h)": 2,
+      "Minimum downtime (h)": 2,
+      "Reserve eligibility": [
+        "r1"
+      ],
+      "Initial status (h)": -24,
+      "Initial power (MW)": 0.0
+    },
+    "g19": {
+      "Bus": "b42",
+      "Production cost curve (MW)": [
+        5.2524860860556535,
+        27.82784506869671,
+        50.40320405133777,
+        72.97856303397884,
+        95.5539220166199
+      ],
+      "Production cost curve ($)": [
+        879.4326742803883,
+        1512.424767405886,
+        2162.1603615958393,
+        3137.1468284801804,
+        4509.51342758641
+      ],
+      "Startup costs ($)": [
+        3687.6,
+        4477.56,
+        5271.11
+      ],
+      "Startup delays (h)": [
+        1,
+        2,
+        4
+      ],
+      "Ramp up limit (MW)": 66.89,
+      "Ramp down limit (MW)": 66.89,
+      "Startup limit (MW)": 66.89,
+      "Shutdown limit (MW)": 66.89,
+      "Minimum uptime (h)": 1,
+      "Minimum downtime (h)": 1,
+      "Reserve eligibility": [
+        "r1"
+      ],
+      "Initial status (h)": 24,
+      "Initial power (MW)": 95.5539220166199
+    },
+    "g20": {
+      "Bus": "b46",
+      "Production cost curve (MW)": [
+        0.0,
+        29.45299907185635,
+        58.90599814371271,
+        88.35899721556903,
+        117.8119962874254
+      ],
+      "Production cost curve ($)": [
+        834.8587083166872,
+        2086.7613133613177,
+        3385.2905060183816,
+        4897.370190637563,
+        6743.599131299954
+      ],
+      "Startup costs ($)": [
+        8836.95,
+        9550.06,
+        10517.64
+      ],
+      "Startup delays (h)": [
+        4,
+        8,
+        16
+      ],
+      "Ramp up limit (MW)": 82.47,
+      "Ramp down limit (MW)": 82.47,
+      "Startup limit (MW)": 82.47,
+      "Shutdown limit (MW)": 82.47,
+      "Minimum uptime (h)": 4,
+      "Minimum downtime (h)": 4,
+      "Reserve eligibility": [
+        "r1"
+      ],
+      "Initial status (h)": 24,
+      "Initial power (MW)": 117.8119962874254
+    },
+    "g21": {
+      "Bus": "b49",
+      "Production cost curve (MW)": [
+        44.3775589099305,
+        109.05424983342031,
+        173.73094075691003,
+        238.4076316803998,
+        303.0843226038895
+      ],
+      "Production cost curve ($)": [
+        2913.4854293944936,
+        5541.929589847705,
+        8600.037113872837,
+        11718.836328038666,
+        15311.102562661814
+      ],
+      "Startup costs ($)": [
+        27172.23,
+        31349.25,
+        38783.97
+      ],
+      "Startup delays (h)": [
+        1,
+        2,
+        4
+      ],
+      "Ramp up limit (MW)": 212.16,
+      "Ramp down limit (MW)": 212.16,
+      "Startup limit (MW)": 212.16,
+      "Shutdown limit (MW)": 212.16,
+      "Minimum uptime (h)": 1,
+      "Minimum downtime (h)": 1,
+      "Reserve eligibility": [
+        "r1"
+      ],
+      "Initial status (h)": 24,
+      "Initial power (MW)": 303.0843226038895
+    },
+    "g22": {
+      "Bus": "b54",
+      "Production cost curve (MW)": [
+        4.888034381805093,
+        39.61784749921156,
+        74.34766061661801,
+        109.07747373402448,
+        143.80728685143094
+      ],
+      "Production cost curve ($)": [
+        574.495224643025,
+        1512.147227340077,
+        2508.0101922987924,
+        4672.833687006423,
+        8281.275415464377
+      ],
+      "Startup costs ($)": [
+        6041.56,
+        6485.25,
+        6500.51
+      ],
+      "Startup delays (h)": [
+        1,
+        2,
+        4
+      ],
+      "Ramp up limit (MW)": 100.67,
+      "Ramp down limit (MW)": 100.67,
+      "Startup limit (MW)": 100.67,
+      "Shutdown limit (MW)": 100.67,
+      "Minimum uptime (h)": 1,
+      "Minimum downtime (h)": 1,
+      "Reserve eligibility": [
+        "r1"
+      ],
+      "Initial status (h)": 24,
+      "Initial power (MW)": 143.80728685143094
+    },
+    "g23": {
+      "Bus": "b55",
+      "Production cost curve (MW)": [
+        5.884874001495103,
+        28.55168795876002,
+        51.21850191602493,
+        73.88531587328984,
+        96.55212983055476
+      ],
+      "Production cost curve ($)": [
+        848.1444053988488,
+        1467.3080250690796,
+        2122.758459890304,
+        3498.417744051299,
+        5707.141128256535
+      ],
+      "Startup costs ($)": [
+        4003.49,
+        4946.08,
+        5821.4
+      ],
+      "Startup delays (h)": [
+        4,
+        8,
+        16
+      ],
+      "Ramp up limit (MW)": 67.59,
+      "Ramp down limit (MW)": 67.59,
+      "Startup limit (MW)": 67.59,
+      "Shutdown limit (MW)": 67.59,
+      "Minimum uptime (h)": 4,
+      "Minimum downtime (h)": 4,
+      "Reserve eligibility": [
+        "r1"
+      ],
+      "Initial status (h)": -24,
+      "Initial power (MW)": 0.0
+    },
+    "g24": {
+      "Bus": "b56",
+      "Production cost curve (MW)": [
+        10.884639995773297,
+        31.333226517767095,
+        51.78181303976089,
+        72.2303995617547,
+        92.67898608374847
+      ],
+      "Production cost curve ($)": [
+        1064.9164393088915,
+        1631.2969818657075,
+        2230.4735759114787,
+        3475.895362181617,
+        5462.811744306398
+      ],
+      "Startup costs ($)": [
+        7145.39,
+        8287.38,
+        10104.19
+      ],
+      "Startup delays (h)": [
+        2,
+        4,
+        8
+      ],
+      "Ramp up limit (MW)": 64.88,
+      "Ramp down limit (MW)": 64.88,
+      "Startup limit (MW)": 64.88,
+      "Shutdown limit (MW)": 64.88,
+      "Minimum uptime (h)": 2,
+      "Minimum downtime (h)": 2,
+      "Reserve eligibility": [
+        "r1"
+      ],
+      "Initial status (h)": -24,
+      "Initial power (MW)": 0.0
+    },
+    "g25": {
+      "Bus": "b59",
+      "Production cost curve (MW)": [
+        40.39325855978199,
+        92.7246802546783,
+        145.0561019495746,
+        197.38752364447095,
+        249.7189453393672
+      ],
+      "Production cost curve ($)": [
+        1937.5686086207706,
+        3384.9057832379212,
+        4921.25770998696,
+        6526.739764278368,
+        8194.070742683552
+      ],
+      "Startup costs ($)": [
+        9019.75,
+        11464.54,
+        18089.51
+      ],
+      "Startup delays (h)": [
+        4,
+        8,
+        16
+      ],
+      "Ramp up limit (MW)": 174.8,
+      "Ramp down limit (MW)": 174.8,
+      "Startup limit (MW)": 174.8,
+      "Shutdown limit (MW)": 174.8,
+      "Minimum uptime (h)": 4,
+      "Minimum downtime (h)": 4,
+      "Reserve eligibility": [
+        "r1"
+      ],
+      "Initial status (h)": 24,
+      "Initial power (MW)": 249.7189453393672
+    },
+    "g26": {
+      "Bus": "b61",
+      "Production cost curve (MW)": [
+        61.16910739640327,
+        110.32384264624449,
+        159.47857789608577,
+        208.633313145927,
+        257.78804839576816
+      ],
+      "Production cost curve ($)": [
+        4672.014428346694,
+        6147.901273594847,
+        7729.4965191381625,
+        9384.511624698105,
+        11102.970200281075
+      ],
+      "Startup costs ($)": [
+        9290.9,
+        11187.2,
+        17612.94
+      ],
+      "Startup delays (h)": [
+        1,
+        2,
+        4
+      ],
+      "Ramp up limit (MW)": 180.45,
+      "Ramp down limit (MW)": 180.45,
+      "Startup limit (MW)": 180.45,
+      "Shutdown limit (MW)": 180.45,
+      "Minimum uptime (h)": 1,
+      "Minimum downtime (h)": 1,
+      "Reserve eligibility": [
+        "r1"
+      ],
+      "Initial status (h)": 24,
+      "Initial power (MW)": 257.78804839576816
+    },
+    "g27": {
+      "Bus": "b62",
+      "Production cost curve (MW)": [
+        0.6018167000543045,
+        24.492190645533782,
+        48.382564591013264,
+        72.27293853649275,
+        96.16331248197221
+      ],
+      "Production cost curve ($)": [
+        644.7122022880035,
+        1296.7133944396028,
+        1985.777447037844,
+        3431.5770306239515,
+        5754.438360905344
+      ],
+      "Startup costs ($)": [
+        2591.49,
+        2724.19,
+        2730.41
+      ],
+      "Startup delays (h)": [
+        2,
+        4,
+        8
+      ],
+      "Ramp up limit (MW)": 67.31,
+      "Ramp down limit (MW)": 67.31,
+      "Startup limit (MW)": 67.31,
+      "Shutdown limit (MW)": 67.31,
+      "Minimum uptime (h)": 2,
+      "Minimum downtime (h)": 2,
+      "Reserve eligibility": [
+        "r1"
+      ],
+      "Initial status (h)": -24,
+      "Initial power (MW)": 0.0
+    },
+    "g28": {
+      "Bus": "b65",
+      "Production cost curve (MW)": [
+        0.0,
+        122.75,
+        245.5,
+        368.24999999999994,
+        491.0
+      ],
+      "Production cost curve ($)": [
+        692.1328033022883,
+        19410.83237865378,
+        42237.26322987021,
+        65071.403802327724,
+        87905.54437478524
+      ],
+      "Startup costs ($)": [
+        4175.48,
+        4233.19,
+        4233.19
+      ],
+      "Startup delays (h)": [
+        4,
+        8,
+        16
+      ],
+      "Ramp up limit (MW)": 343.7,
+      "Ramp down limit (MW)": 343.7,
+      "Startup limit (MW)": 343.7,
+      "Shutdown limit (MW)": 343.7,
+      "Minimum uptime (h)": 4,
+      "Minimum downtime (h)": 4,
+      "Reserve eligibility": [
+        "r1"
+      ],
+      "Initial status (h)": 24,
+      "Initial power (MW)": 0.0
+    },
+    "g29": {
+      "Bus": "b66",
+      "Production cost curve (MW)": [
+        0.0,
+        123.0,
+        246.0,
+        368.9999999999999,
+        492.0
+      ],
+      "Production cost curve ($)": [
+        810.9779804743857,
+        16868.025736098803,
+        37024.31182542988,
+        57195.77499602774,
+        77367.23816662558
+      ],
+      "Startup costs ($)": [
+        5012.93,
+        5066.4,
+        5066.4
+      ],
+      "Startup delays (h)": [
+        2,
+        4,
+        8
+      ],
+      "Ramp up limit (MW)": 344.4,
+      "Ramp down limit (MW)": 344.4,
+      "Startup limit (MW)": 344.4,
+      "Shutdown limit (MW)": 344.4,
+      "Minimum uptime (h)": 2,
+      "Minimum downtime (h)": 2,
+      "Reserve eligibility": [
+        "r1"
+      ],
+      "Initial status (h)": 24,
+      "Initial power (MW)": 0.0
+    },
+    "g30": {
+      "Bus": "b69",
+      "Production cost curve (MW)": [
+        8.309440927254679,
+        207.53208069544098,
+        406.7547204636273,
+        605.9773602318137,
+        805.2
+      ],
+      "Production cost curve ($)": [
+        82.57066332406953,
+        29983.079749159886,
+        61370.99551693209,
+        92870.34607553217,
+        124789.82895262697
+      ],
+      "Startup costs ($)": [
+        52742.62,
+        57804.69,
+        59127.86
+      ],
+      "Startup delays (h)": [
+        4,
+        8,
+        16
+      ],
+      "Ramp up limit (MW)": 563.64,
+      "Ramp down limit (MW)": 563.64,
+      "Startup limit (MW)": 563.64,
+      "Shutdown limit (MW)": 563.64,
+      "Minimum uptime (h)": 4,
+      "Minimum downtime (h)": 4,
+      "Reserve eligibility": [
+        "r1"
+      ],
+      "Initial status (h)": -24,
+      "Initial power (MW)": 0.0
+    },
+    "g31": {
+      "Bus": "b70",
+      "Production cost curve (MW)": [
+        10.167117434340419,
+        31.08089771755275,
+        51.994678000765084,
+        72.90845828397742,
+        93.82223856718977
+      ],
+      "Production cost curve ($)": [
+        930.5099765964126,
+        1494.850344134859,
+        2110.7496751780604,
+        3731.934143193903,
+        6488.577634223217
+      ],
+      "Startup costs ($)": [
+        7192.91,
+        8641.46,
+        10158.75
+      ],
+      "Startup delays (h)": [
+        2,
+        4,
+        8
+      ],
+      "Ramp up limit (MW)": 65.68,
+      "Ramp down limit (MW)": 65.68,
+      "Startup limit (MW)": 65.68,
+      "Shutdown limit (MW)": 65.68,
+      "Minimum uptime (h)": 2,
+      "Minimum downtime (h)": 2,
+      "Reserve eligibility": [
+        "r1"
+      ],
+      "Initial status (h)": -24,
+      "Initial power (MW)": 0.0
+    },
+    "g32": {
+      "Bus": "b72",
+      "Production cost curve (MW)": [
+        1.5916400301907256,
+        24.832430819307692,
+        48.07322160842466,
+        71.31401239754163,
+        94.55480318665862
+      ],
+      "Production cost curve ($)": [
+        783.5242767192206,
+        1460.1412286228606,
+        2140.2244449968475,
+        2857.4123185682915,
+        3647.4974724331405
+      ],
+      "Startup costs ($)": [
+        5659.87,
+        5974.61,
+        6129.41
+      ],
+      "Startup delays (h)": [
+        1,
+        2,
+        4
+      ],
+      "Ramp up limit (MW)": 66.19,
+      "Ramp down limit (MW)": 66.19,
+      "Startup limit (MW)": 66.19,
+      "Shutdown limit (MW)": 66.19,
+      "Minimum uptime (h)": 1,
+      "Minimum downtime (h)": 1,
+      "Reserve eligibility": [
+        "r1"
+      ],
+      "Initial status (h)": 24,
+      "Initial power (MW)": 94.55480318665862
+    },
+    "g33": {
+      "Bus": "b73",
+      "Production cost curve (MW)": [
+        12.96590035668138,
+        31.08699659137843,
+        49.208092826075465,
+        67.32918906077252,
+        85.45028529546957
+      ],
+      "Production cost curve ($)": [
+        994.3764943175593,
+        1473.3670392307217,
+        1999.6825371463058,
+        3487.035004793729,
+        6056.114466710509
+      ],
+      "Startup costs ($)": [
+        6313.64,
+        7455.72,
+        9523.0
+      ],
+      "Startup delays (h)": [
+        4,
+        8,
+        16
+      ],
+      "Ramp up limit (MW)": 59.82,
+      "Ramp down limit (MW)": 59.82,
+      "Startup limit (MW)": 59.82,
+      "Shutdown limit (MW)": 59.82,
+      "Minimum uptime (h)": 4,
+      "Minimum downtime (h)": 4,
+      "Reserve eligibility": [
+        "r1"
+      ],
+      "Initial status (h)": -24,
+      "Initial power (MW)": 0.0
+    },
+    "g34": {
+      "Bus": "b74",
+      "Production cost curve (MW)": [
+        6.0262382911882195,
+        27.469087024466287,
+        48.91193575774436,
+        70.35478449102244,
+        91.79763322430053
+      ],
+      "Production cost curve ($)": [
+        809.9180952096565,
+        1398.2710411957157,
+        2014.3624848492364,
+        3179.314011734611,
+        4982.566489069387
+      ],
+      "Startup costs ($)": [
+        3809.23,
+        4680.62,
+        5550.33
+      ],
+      "Startup delays (h)": [
+        2,
+        4,
+        8
+      ],
+      "Ramp up limit (MW)": 64.26,
+      "Ramp down limit (MW)": 64.26,
+      "Startup limit (MW)": 64.26,
+      "Shutdown limit (MW)": 64.26,
+      "Minimum uptime (h)": 2,
+      "Minimum downtime (h)": 2,
+      "Reserve eligibility": [
+        "r1"
+      ],
+      "Initial status (h)": 24,
+      "Initial power (MW)": 91.79763322430053
+    },
+    "g35": {
+      "Bus": "b76",
+      "Production cost curve (MW)": [
+        5.651552535897544,
+        27.814416819282428,
+        49.97728110266731,
+        72.14014538605221,
+        94.30300966943709
+      ],
+      "Production cost curve ($)": [
+        928.4502784012296,
+        1549.4368386107344,
+        2197.6365639117303,
+        3387.8145539152624,
+        5209.182450582436
+      ],
+      "Startup costs ($)": [
+        6190.51,
+        6696.57,
+        7699.55
+      ],
+      "Startup delays (h)": [
+        1,
+        2,
+        4
+      ],
+      "Ramp up limit (MW)": 66.01,
+      "Ramp down limit (MW)": 66.01,
+      "Startup limit (MW)": 66.01,
+      "Shutdown limit (MW)": 66.01,
+      "Minimum uptime (h)": 1,
+      "Minimum downtime (h)": 1,
+      "Reserve eligibility": [
+        "r1"
+      ],
+      "Initial status (h)": 24,
+      "Initial power (MW)": 94.30300966943709
+    },
+    "g36": {
+      "Bus": "b77",
+      "Production cost curve (MW)": [
+        4.965044121110516,
+        26.787599242438137,
+        48.61015436376575,
+        70.43270948509335,
+        92.25526460642098
+      ],
+      "Production cost curve ($)": [
+        700.8319534624053,
+        1299.3203766143833,
+        1939.9931593739548,
+        3391.6010159377965,
+        5763.058627120885
+      ],
+      "Startup costs ($)": [
+        5850.94,
+        6787.39,
+        7263.61
+      ],
+      "Startup delays (h)": [
+        2,
+        4,
+        8
+      ],
+      "Ramp up limit (MW)": 64.58,
+      "Ramp down limit (MW)": 64.58,
+      "Startup limit (MW)": 64.58,
+      "Shutdown limit (MW)": 64.58,
+      "Minimum uptime (h)": 2,
+      "Minimum downtime (h)": 2,
+      "Reserve eligibility": [
+        "r1"
+      ],
+      "Initial status (h)": -24,
+      "Initial power (MW)": 0.0
+    },
+    "g37": {
+      "Bus": "b80",
+      "Production cost curve (MW)": [
+        0.0,
+        144.24999999999997,
+        288.49999999999994,
+        432.7499999999999,
+        577.0
+      ],
+      "Production cost curve ($)": [
+        899.4697998192673,
+        19443.202869721732,
+        44334.833440762784,
+        69235.95464714899,
+        94137.07585353519
+      ],
+      "Startup costs ($)": [
+        5687.81,
+        5736.29,
+        5736.29
+      ],
+      "Startup delays (h)": [
+        2,
+        4,
+        8
+      ],
+      "Ramp up limit (MW)": 403.9,
+      "Ramp down limit (MW)": 403.9,
+      "Startup limit (MW)": 403.9,
+      "Shutdown limit (MW)": 403.9,
+      "Minimum uptime (h)": 2,
+      "Minimum downtime (h)": 2,
+      "Reserve eligibility": [
+        "r1"
+      ],
+      "Initial status (h)": 24,
+      "Initial power (MW)": 0.0
+    },
+    "g38": {
+      "Bus": "b85",
+      "Production cost curve (MW)": [
+        5.29328444172616,
+        26.912773797166828,
+        48.532263152607506,
+        70.15175250804819,
+        91.77124186348884
+      ],
+      "Production cost curve ($)": [
+        765.9911090466169,
+        1380.0516462268693,
+        2010.8609940183123,
+        2928.1234542974244,
+        4186.117521370981
+      ],
+      "Startup costs ($)": [
+        5725.71,
+        6716.75,
+        7218.76
+      ],
+      "Startup delays (h)": [
+        1,
+        2,
+        4
+      ],
+      "Ramp up limit (MW)": 64.24,
+      "Ramp down limit (MW)": 64.24,
+      "Startup limit (MW)": 64.24,
+      "Shutdown limit (MW)": 64.24,
+      "Minimum uptime (h)": 1,
+      "Minimum downtime (h)": 1,
+      "Reserve eligibility": [
+        "r1"
+      ],
+      "Initial status (h)": 24,
+      "Initial power (MW)": 91.77124186348884
+    },
+    "g39": {
+      "Bus": "b87",
+      "Production cost curve (MW)": [
+        0.7501569046046119,
+        25.27632704423426,
+        49.80249718386391,
+        74.32866732349355,
+        98.8548374631232
+      ],
+      "Production cost curve ($)": [
+        658.7137245606468,
+        1414.6684701089202,
+        2213.8015399998826,
+        3708.4768995736117,
+        6017.584369998256
+      ],
+      "Startup costs ($)": [
+        5131.76,
+        5459.19,
+        5586.35
+      ],
+      "Startup delays (h)": [
+        1,
+        2,
+        4
+      ],
+      "Ramp up limit (MW)": 69.2,
+      "Ramp down limit (MW)": 69.2,
+      "Startup limit (MW)": 69.2,
+      "Shutdown limit (MW)": 69.2,
+      "Minimum uptime (h)": 1,
+      "Minimum downtime (h)": 1,
+      "Reserve eligibility": [
+        "r1"
+      ],
+      "Initial status (h)": -24,
+      "Initial power (MW)": 0.0
+    },
+    "g40": {
+      "Bus": "b89",
+      "Production cost curve (MW)": [
+        44.28061297643047,
+        208.9851158341637,
+        373.6896186918967,
+        538.3941215496297,
+        703.098624407363
+      ],
+      "Production cost curve ($)": [
+        0.0,
+        9647.786292147457,
+        19940.45729802816,
+        30895.326541293078,
+        44451.9523262953
+      ],
+      "Startup costs ($)": [
+        10207.29,
+        13516.07,
+        19663.83
+      ],
+      "Startup delays (h)": [
+        1,
+        2,
+        4
+      ],
+      "Ramp up limit (MW)": 492.17,
+      "Ramp down limit (MW)": 492.17,
+      "Startup limit (MW)": 492.17,
+      "Shutdown limit (MW)": 492.17,
+      "Minimum uptime (h)": 1,
+      "Minimum downtime (h)": 1,
+      "Reserve eligibility": [
+        "r1"
+      ],
+      "Initial status (h)": -24,
+      "Initial power (MW)": 0.0
+    },
+    "g41": {
+      "Bus": "b90",
+      "Production cost curve (MW)": [
+        3.395627463228053,
+        25.877839994401608,
+        48.360052525575185,
+        70.84226505674872,
+        93.3244775879223
+      ],
+      "Production cost curve ($)": [
+        689.806427830029,
+        1300.7166650602223,
+        1951.0068174080525,
+        3384.971683238613,
+        5717.436912978199
+      ],
+      "Startup costs ($)": [
+        3816.85,
+        4453.06,
+        4862.06
+      ],
+      "Startup delays (h)": [
+        4,
+        8,
+        16
+      ],
+      "Ramp up limit (MW)": 65.33,
+      "Ramp down limit (MW)": 65.33,
+      "Startup limit (MW)": 65.33,
+      "Shutdown limit (MW)": 65.33,
+      "Minimum uptime (h)": 4,
+      "Minimum downtime (h)": 4,
+      "Reserve eligibility": [
+        "r1"
+      ],
+      "Initial status (h)": -24,
+      "Initial power (MW)": 0.0
+    },
+    "g42": {
+      "Bus": "b91",
+      "Production cost curve (MW)": [
+        5.216150562798514,
+        27.16180621568692,
+        49.10746186857532,
+        71.05311752146373,
+        92.99877317435212
+      ],
+      "Production cost curve ($)": [
+        846.5833091592067,
+        1484.2985477128402,
+        2128.493351863652,
+        2847.0010663667344,
+        3672.685656428585
+      ],
+      "Startup costs ($)": [
+        6786.61,
+        7746.99,
+        8408.77
+      ],
+      "Startup delays (h)": [
+        2,
+        4,
+        8
+      ],
+      "Ramp up limit (MW)": 65.1,
+      "Ramp down limit (MW)": 65.1,
+      "Startup limit (MW)": 65.1,
+      "Shutdown limit (MW)": 65.1,
+      "Minimum uptime (h)": 2,
+      "Minimum downtime (h)": 2,
+      "Reserve eligibility": [
+        "r1"
+      ],
+      "Initial status (h)": 24,
+      "Initial power (MW)": 92.99877317435212
+    },
+    "g43": {
+      "Bus": "b92",
+      "Production cost curve (MW)": [
+        8.32491151869846,
+        29.745686427842333,
+        51.1664613369862,
+        72.58723624613009,
+        94.00801115527396
+      ],
+      "Production cost curve ($)": [
+        961.0749305181212,
+        1579.2329672351882,
+        2203.4878439106615,
+        2890.889697343915,
+        3674.6342295432714
+      ],
+      "Startup costs ($)": [
+        6680.05,
+        8070.47,
+        9216.34
+      ],
+      "Startup delays (h)": [
+        4,
+        8,
+        16
+      ],
+      "Ramp up limit (MW)": 65.81,
+      "Ramp down limit (MW)": 65.81,
+      "Startup limit (MW)": 65.81,
+      "Shutdown limit (MW)": 65.81,
+      "Minimum uptime (h)": 4,
+      "Minimum downtime (h)": 4,
+      "Reserve eligibility": [
+        "r1"
+      ],
+      "Initial status (h)": 24,
+      "Initial power (MW)": 94.00801115527396
+    },
+    "g44": {
+      "Bus": "b99",
+      "Production cost curve (MW)": [
+        4.7922964563453245,
+        27.247158148568985,
+        49.702019840792644,
+        72.1568815330163,
+        94.61174322523995
+      ],
+      "Production cost curve ($)": [
+        781.7077368515977,
+        1398.8116859957418,
+        2052.417643664918,
+        3419.363738854041,
+        5605.782045703597
+      ],
+      "Startup costs ($)": [
+        5180.49,
+        6004.37,
+        6674.01
+      ],
+      "Startup delays (h)": [
+        4,
+        8,
+        16
+      ],
+      "Ramp up limit (MW)": 66.23,
+      "Ramp down limit (MW)": 66.23,
+      "Startup limit (MW)": 66.23,
+      "Shutdown limit (MW)": 66.23,
+      "Minimum uptime (h)": 4,
+      "Minimum downtime (h)": 4,
+      "Reserve eligibility": [
+        "r1"
+      ],
+      "Initial status (h)": -24,
+      "Initial power (MW)": 0.0
+    },
+    "g45": {
+      "Bus": "b100",
+      "Production cost curve (MW)": [
+        14.915267861233742,
+        99.15595176629705,
+        183.3966356713603,
+        267.63731957642364,
+        351.87800348148687
+      ],
+      "Production cost curve ($)": [
+        0.0,
+        11756.908203677553,
+        23786.376801208713,
+        35849.66997390585,
+        48254.936152133305
+      ],
+      "Startup costs ($)": [
+        17443.95,
+        19968.86,
+        24433.03
+      ],
+      "Startup delays (h)": [
+        1,
+        2,
+        4
+      ],
+      "Ramp up limit (MW)": 246.31,
+      "Ramp down limit (MW)": 246.31,
+      "Startup limit (MW)": 246.31,
+      "Shutdown limit (MW)": 246.31,
+      "Minimum uptime (h)": 1,
+      "Minimum downtime (h)": 1,
+      "Reserve eligibility": [
+        "r1"
+      ],
+      "Initial status (h)": -24,
+      "Initial power (MW)": 0.0
+    },
+    "g46": {
+      "Bus": "b103",
+      "Production cost curve (MW)": [
+        2.4912924420898417,
+        35.51599765662352,
+        68.5407028711572,
+        101.56540808569089,
+        134.5901133002246
+      ],
+      "Production cost curve ($)": [
+        669.1748313307096,
+        1592.9918226405766,
+        2579.343570003899,
+        4735.372432111114,
+        8230.032984151738
+      ],
+      "Startup costs ($)": [
+        8137.2,
+        9058.7,
+        9202.61
+      ],
+      "Startup delays (h)": [
+        4,
+        8,
+        16
+      ],
+      "Ramp up limit (MW)": 94.21,
+      "Ramp down limit (MW)": 94.21,
+      "Startup limit (MW)": 94.21,
+      "Shutdown limit (MW)": 94.21,
+      "Minimum uptime (h)": 4,
+      "Minimum downtime (h)": 4,
+      "Reserve eligibility": [
+        "r1"
+      ],
+      "Initial status (h)": -24,
+      "Initial power (MW)": 0.0
+    },
+    "g47": {
+      "Bus": "b104",
+      "Production cost curve (MW)": [
+        5.146803531582788,
+        27.54918783517084,
+        49.95157213875889,
+        72.35395644234696,
+        94.75634074593502
+      ],
+      "Production cost curve ($)": [
+        802.8984755573163,
+        1437.5933432391325,
+        2084.5948408659597,
+        2940.144346926838,
+        4058.9552209692006
+      ],
+      "Startup costs ($)": [
+        4040.35,
+        5041.1,
+        5508.12
+      ],
+      "Startup delays (h)": [
+        1,
+        2,
+        4
+      ],
+      "Ramp up limit (MW)": 66.33,
+      "Ramp down limit (MW)": 66.33,
+      "Startup limit (MW)": 66.33,
+      "Shutdown limit (MW)": 66.33,
+      "Minimum uptime (h)": 1,
+      "Minimum downtime (h)": 1,
+      "Reserve eligibility": [
+        "r1"
+      ],
+      "Initial status (h)": 24,
+      "Initial power (MW)": 94.75634074593502
+    },
+    "g48": {
+      "Bus": "b105",
+      "Production cost curve (MW)": [
+        7.0479711691624995,
+        27.8204977889945,
+        48.593024408826516,
+        69.36555102865853,
+        90.13807764849055
+      ],
+      "Production cost curve ($)": [
+        855.3860536589514,
+        1435.2472643476156,
+        2036.2548333665009,
+        3046.1022321216246,
+        4535.406917091228
+      ],
+      "Startup costs ($)": [
+        4838.68,
+        5747.75,
+        6790.22
+      ],
+      "Startup delays (h)": [
+        4,
+        8,
+        16
+      ],
+      "Ramp up limit (MW)": 63.1,
+      "Ramp down limit (MW)": 63.1,
+      "Startup limit (MW)": 63.1,
+      "Shutdown limit (MW)": 63.1,
+      "Minimum uptime (h)": 4,
+      "Minimum downtime (h)": 4,
+      "Reserve eligibility": [
+        "r1"
+      ],
+      "Initial status (h)": 24,
+      "Initial power (MW)": 90.13807764849055
+    },
+    "g49": {
+      "Bus": "b107",
+      "Production cost curve (MW)": [
+        5.373802064509679,
+        27.067293522192344,
+        48.760784979875005,
+        70.45427643755767,
+        92.14776789524034
+      ],
+      "Production cost curve ($)": [
+        696.8202159439475,
+        1302.2022812227347,
+        1928.9177175576199,
+        2935.339745718627,
+        4387.571319094563
+      ],
+      "Startup costs ($)": [
+        4044.72,
+        5113.62,
+        5308.26
+      ],
+      "Startup delays (h)": [
+        2,
+        4,
+        8
+      ],
+      "Ramp up limit (MW)": 64.5,
+      "Ramp down limit (MW)": 64.5,
+      "Startup limit (MW)": 64.5,
+      "Shutdown limit (MW)": 64.5,
+      "Minimum uptime (h)": 2,
+      "Minimum downtime (h)": 2,
+      "Reserve eligibility": [
+        "r1"
+      ],
+      "Initial status (h)": 24,
+      "Initial power (MW)": 92.14776789524034
+    },
+    "g50": {
+      "Bus": "b110",
+      "Production cost curve (MW)": [
+        8.657347531884211,
+        29.525778807158176,
+        50.39421008243215,
+        71.26264135770612,
+        92.13107263298008
+      ],
+      "Production cost curve ($)": [
+        953.8473511968091,
+        1536.9948065693345,
+        2144.8799047621924,
+        3230.678015915687,
+        4872.814323510323
+      ],
+      "Startup costs ($)": [
+        5920.14,
+        6974.14,
+        8326.11
+      ],
+      "Startup delays (h)": [
+        2,
+        4,
+        8
+      ],
+      "Ramp up limit (MW)": 64.49,
+      "Ramp down limit (MW)": 64.49,
+      "Startup limit (MW)": 64.49,
+      "Shutdown limit (MW)": 64.49,
+      "Minimum uptime (h)": 2,
+      "Minimum downtime (h)": 2,
+      "Reserve eligibility": [
+        "r1"
+      ],
+      "Initial status (h)": 24,
+      "Initial power (MW)": 92.13107263298008
+    },
+    "g51": {
+      "Bus": "b111",
+      "Production cost curve (MW)": [
+        1.6332127366047806,
+        34.14490158245508,
+        66.65659042830538,
+        99.16827927415568,
+        131.67996812000598
+      ],
+      "Production cost curve ($)": [
+        825.8584846450497,
+        1930.4947721247136,
+        3058.871792677512,
+        4369.847435520479,
+        5949.201180867011
+      ],
+      "Startup costs ($)": [
+        9986.14,
+        10907.36,
+        11754.58
+      ],
+      "Startup delays (h)": [
+        1,
+        2,
+        4
+      ],
+      "Ramp up limit (MW)": 92.18,
+      "Ramp down limit (MW)": 92.18,
+      "Startup limit (MW)": 92.18,
+      "Shutdown limit (MW)": 92.18,
+      "Minimum uptime (h)": 1,
+      "Minimum downtime (h)": 1,
+      "Reserve eligibility": [
+        "r1"
+      ],
+      "Initial status (h)": 24,
+      "Initial power (MW)": 131.67996812000598
+    },
+    "g52": {
+      "Bus": "b112",
+      "Production cost curve (MW)": [
+        9.761070160986678,
+        30.89604273201295,
+        52.03101530303923,
+        73.16598787406551,
+        94.30096044509175
+      ],
+      "Production cost curve ($)": [
+        1069.9672630825446,
+        1648.0372560549079,
+        2258.9145605007748,
+        3538.428631162804,
+        5591.716618874314
+      ],
+      "Startup costs ($)": [
+        5451.19,
+        6357.09,
+        8084.2
+      ],
+      "Startup delays (h)": [
+        4,
+        8,
+        16
+      ],
+      "Ramp up limit (MW)": 66.01,
+      "Ramp down limit (MW)": 66.01,
+      "Startup limit (MW)": 66.01,
+      "Shutdown limit (MW)": 66.01,
+      "Minimum uptime (h)": 4,
+      "Minimum downtime (h)": 4,
+      "Reserve eligibility": [
+        "r1"
+      ],
+      "Initial status (h)": -24,
+      "Initial power (MW)": 0.0
+    },
+    "g53": {
+      "Bus": "b113",
+      "Production cost curve (MW)": [
+        4.793632394522021,
+        27.25592730362087,
+        49.71822221271972,
+        72.18051712181857,
+        94.64281203091744
+      ],
+      "Production cost curve ($)": [
+        722.0631673097284,
+        1356.0901482741954,
+        2016.0590161406249,
+        3137.7099317858465,
+        4794.469624712163
+      ],
+      "Startup costs ($)": [
+        6008.08,
+        7002.14,
+        7144.36
+      ],
+      "Startup delays (h)": [
+        2,
+        4,
+        8
+      ],
+      "Ramp up limit (MW)": 66.25,
+      "Ramp down limit (MW)": 66.25,
+      "Startup limit (MW)": 66.25,
+      "Shutdown limit (MW)": 66.25,
+      "Minimum uptime (h)": 2,
+      "Minimum downtime (h)": 2,
+      "Reserve eligibility": [
+        "r1"
+      ],
+      "Initial status (h)": 24,
+      "Initial power (MW)": 94.64281203091744
+    },
+    "g54": {
+      "Bus": "b116",
+      "Production cost curve (MW)": [
+        5.709370317361096,
+        27.749504227969812,
+        49.789638138578546,
+        71.82977204918724,
+        93.86990595979597
+      ],
+      "Production cost curve ($)": [
+        845.5643979252206,
+        1449.0022601966712,
+        2085.732774353907,
+        3395.840316721378,
+        5485.623385843161
+      ],
+      "Startup costs ($)": [
+        3893.75,
+        4585.06,
+        5502.23
+      ],
+      "Startup delays (h)": [
+        2,
+        4,
+        8
+      ],
+      "Ramp up limit (MW)": 65.71,
+      "Ramp down limit (MW)": 65.71,
+      "Startup limit (MW)": 65.71,
+      "Shutdown limit (MW)": 65.71,
+      "Minimum uptime (h)": 2,
+      "Minimum downtime (h)": 2,
+      "Reserve eligibility": [
+        "r1"
+      ],
+      "Initial status (h)": -24,
+      "Initial power (MW)": 0.0
+    }
+  },
+  "Transmission lines": {
+    "l1": {
+      "Source bus": "b1",
+      "Target bus": "b2",
+      "Reactance (ohms)": 0.0999,
+      "Susceptance (S)": 17.47076
+    },
+    "l2": {
+      "Source bus": "b1",
+      "Target bus": "b3",
+      "Reactance (ohms)": 0.0424,
+      "Susceptance (S)": 41.16343
+    },
+    "l3": {
+      "Source bus": "b4",
+      "Target bus": "b5",
+      "Reactance (ohms)": 0.00798,
+      "Susceptance (S)": 218.71294
+    },
+    "l4": {
+      "Source bus": "b3",
+      "Target bus": "b5",
+      "Reactance (ohms)": 0.108,
+      "Susceptance (S)": 16.16046
+    },
+    "l5": {
+      "Source bus": "b5",
+      "Target bus": "b6",
+      "Reactance (ohms)": 0.054,
+      "Susceptance (S)": 32.32091
+    },
+    "l6": {
+      "Source bus": "b6",
+      "Target bus": "b7",
+      "Reactance (ohms)": 0.0208,
+      "Susceptance (S)": 83.91006
+    },
+    "l7": {
+      "Source bus": "b8",
+      "Target bus": "b9",
+      "Reactance (ohms)": 0.0305,
+      "Susceptance (S)": 57.22391
+    },
+    "l8": {
+      "Source bus": "b8",
+      "Target bus": "b5",
+      "Reactance (ohms)": 0.0267,
+      "Susceptance (S)": 65.36814
+    },
+    "l9": {
+      "Source bus": "b9",
+      "Target bus": "b10",
+      "Reactance (ohms)": 0.0322,
+      "Susceptance (S)": 54.20277
+    },
+    "l10": {
+      "Source bus": "b4",
+      "Target bus": "b11",
+      "Reactance (ohms)": 0.0688,
+      "Susceptance (S)": 25.36816
+    },
+    "l11": {
+      "Source bus": "b5",
+      "Target bus": "b11",
+      "Reactance (ohms)": 0.0682,
+      "Susceptance (S)": 25.59134
+    },
+    "l12": {
+      "Source bus": "b11",
+      "Target bus": "b12",
+      "Reactance (ohms)": 0.0196,
+      "Susceptance (S)": 89.04741
+    },
+    "l13": {
+      "Source bus": "b2",
+      "Target bus": "b12",
+      "Reactance (ohms)": 0.0616,
+      "Susceptance (S)": 28.33327
+    },
+    "l14": {
+      "Source bus": "b3",
+      "Target bus": "b12",
+      "Reactance (ohms)": 0.16,
+      "Susceptance (S)": 10.90831
+    },
+    "l15": {
+      "Source bus": "b7",
+      "Target bus": "b12",
+      "Reactance (ohms)": 0.034,
+      "Susceptance (S)": 51.33321
+    },
+    "l16": {
+      "Source bus": "b11",
+      "Target bus": "b13",
+      "Reactance (ohms)": 0.0731,
+      "Susceptance (S)": 23.87591
+    },
+    "l17": {
+      "Source bus": "b12",
+      "Target bus": "b14",
+      "Reactance (ohms)": 0.0707,
+      "Susceptance (S)": 24.68641
+    },
+    "l18": {
+      "Source bus": "b13",
+      "Target bus": "b15",
+      "Reactance (ohms)": 0.2444,
+      "Susceptance (S)": 7.14128
+    },
+    "l19": {
+      "Source bus": "b14",
+      "Target bus": "b15",
+      "Reactance (ohms)": 0.195,
+      "Susceptance (S)": 8.95041
+    },
+    "l20": {
+      "Source bus": "b12",
+      "Target bus": "b16",
+      "Reactance (ohms)": 0.0834,
+      "Susceptance (S)": 20.92721
+    },
+    "l21": {
+      "Source bus": "b15",
+      "Target bus": "b17",
+      "Reactance (ohms)": 0.0437,
+      "Susceptance (S)": 39.93888
+    },
+    "l22": {
+      "Source bus": "b16",
+      "Target bus": "b17",
+      "Reactance (ohms)": 0.1801,
+      "Susceptance (S)": 9.69089
+    },
+    "l23": {
+      "Source bus": "b17",
+      "Target bus": "b18",
+      "Reactance (ohms)": 0.0505,
+      "Susceptance (S)": 34.56098
+    },
+    "l24": {
+      "Source bus": "b18",
+      "Target bus": "b19",
+      "Reactance (ohms)": 0.0493,
+      "Susceptance (S)": 35.40222
+    },
+    "l25": {
+      "Source bus": "b19",
+      "Target bus": "b20",
+      "Reactance (ohms)": 0.117,
+      "Susceptance (S)": 14.91734
+    },
+    "l26": {
+      "Source bus": "b15",
+      "Target bus": "b19",
+      "Reactance (ohms)": 0.0394,
+      "Susceptance (S)": 44.2977
+    },
+    "l27": {
+      "Source bus": "b20",
+      "Target bus": "b21",
+      "Reactance (ohms)": 0.0849,
+      "Susceptance (S)": 20.55747
+    },
+    "l28": {
+      "Source bus": "b21",
+      "Target bus": "b22",
+      "Reactance (ohms)": 0.097,
+      "Susceptance (S)": 17.99309
+    },
+    "l29": {
+      "Source bus": "b22",
+      "Target bus": "b23",
+      "Reactance (ohms)": 0.159,
+      "Susceptance (S)": 10.97691
+    },
+    "l30": {
+      "Source bus": "b23",
+      "Target bus": "b24",
+      "Reactance (ohms)": 0.0492,
+      "Susceptance (S)": 35.47417
+    },
+    "l31": {
+      "Source bus": "b23",
+      "Target bus": "b25",
+      "Reactance (ohms)": 0.08,
+      "Susceptance (S)": 21.81662
+    },
+    "l32": {
+      "Source bus": "b26",
+      "Target bus": "b25",
+      "Reactance (ohms)": 0.0382,
+      "Susceptance (S)": 45.68925
+    },
+    "l33": {
+      "Source bus": "b25",
+      "Target bus": "b27",
+      "Reactance (ohms)": 0.163,
+      "Susceptance (S)": 10.70754
+    },
+    "l34": {
+      "Source bus": "b27",
+      "Target bus": "b28",
+      "Reactance (ohms)": 0.0855,
+      "Susceptance (S)": 20.41321
+    },
+    "l35": {
+      "Source bus": "b28",
+      "Target bus": "b29",
+      "Reactance (ohms)": 0.0943,
+      "Susceptance (S)": 18.50826
+    },
+    "l36": {
+      "Source bus": "b30",
+      "Target bus": "b17",
+      "Reactance (ohms)": 0.0388,
+      "Susceptance (S)": 44.98271
+    },
+    "l37": {
+      "Source bus": "b8",
+      "Target bus": "b30",
+      "Reactance (ohms)": 0.0504,
+      "Susceptance (S)": 34.62955
+    },
+    "l38": {
+      "Source bus": "b26",
+      "Target bus": "b30",
+      "Reactance (ohms)": 0.086,
+      "Susceptance (S)": 20.29453
+    },
+    "l39": {
+      "Source bus": "b17",
+      "Target bus": "b31",
+      "Reactance (ohms)": 0.1563,
+      "Susceptance (S)": 11.16653
+    },
+    "l40": {
+      "Source bus": "b29",
+      "Target bus": "b31",
+      "Reactance (ohms)": 0.0331,
+      "Susceptance (S)": 52.72898
+    },
+    "l41": {
+      "Source bus": "b23",
+      "Target bus": "b32",
+      "Reactance (ohms)": 0.1153,
+      "Susceptance (S)": 15.13729
+    },
+    "l42": {
+      "Source bus": "b31",
+      "Target bus": "b32",
+      "Reactance (ohms)": 0.0985,
+      "Susceptance (S)": 17.71908
+    },
+    "l43": {
+      "Source bus": "b27",
+      "Target bus": "b32",
+      "Reactance (ohms)": 0.0755,
+      "Susceptance (S)": 23.11694
+    },
+    "l44": {
+      "Source bus": "b15",
+      "Target bus": "b33",
+      "Reactance (ohms)": 0.1244,
+      "Susceptance (S)": 14.02998
+    },
+    "l45": {
+      "Source bus": "b19",
+      "Target bus": "b34",
+      "Reactance (ohms)": 0.247,
+      "Susceptance (S)": 7.06611
+    },
+    "l46": {
+      "Source bus": "b35",
+      "Target bus": "b36",
+      "Reactance (ohms)": 0.0102,
+      "Susceptance (S)": 171.11071
+    },
+    "l47": {
+      "Source bus": "b35",
+      "Target bus": "b37",
+      "Reactance (ohms)": 0.0497,
+      "Susceptance (S)": 35.11729
+    },
+    "l48": {
+      "Source bus": "b33",
+      "Target bus": "b37",
+      "Reactance (ohms)": 0.142,
+      "Susceptance (S)": 12.29105
+    },
+    "l49": {
+      "Source bus": "b34",
+      "Target bus": "b36",
+      "Reactance (ohms)": 0.0268,
+      "Susceptance (S)": 65.12423
+    },
+    "l50": {
+      "Source bus": "b34",
+      "Target bus": "b37",
+      "Reactance (ohms)": 0.0094,
+      "Susceptance (S)": 185.67332
+    },
+    "l51": {
+      "Source bus": "b38",
+      "Target bus": "b37",
+      "Reactance (ohms)": 0.0375,
+      "Susceptance (S)": 46.54211
+    },
+    "l52": {
+      "Source bus": "b37",
+      "Target bus": "b39",
+      "Reactance (ohms)": 0.106,
+      "Susceptance (S)": 16.46537
+    },
+    "l53": {
+      "Source bus": "b37",
+      "Target bus": "b40",
+      "Reactance (ohms)": 0.168,
+      "Susceptance (S)": 10.38886
+    },
+    "l54": {
+      "Source bus": "b30",
+      "Target bus": "b38",
+      "Reactance (ohms)": 0.054,
+      "Susceptance (S)": 32.32091
+    },
+    "l55": {
+      "Source bus": "b39",
+      "Target bus": "b40",
+      "Reactance (ohms)": 0.0605,
+      "Susceptance (S)": 28.84842
+    },
+    "l56": {
+      "Source bus": "b40",
+      "Target bus": "b41",
+      "Reactance (ohms)": 0.0487,
+      "Susceptance (S)": 35.83838
+    },
+    "l57": {
+      "Source bus": "b40",
+      "Target bus": "b42",
+      "Reactance (ohms)": 0.183,
+      "Susceptance (S)": 9.53732
+    },
+    "l58": {
+      "Source bus": "b41",
+      "Target bus": "b42",
+      "Reactance (ohms)": 0.135,
+      "Susceptance (S)": 12.92836
+    },
+    "l59": {
+      "Source bus": "b43",
+      "Target bus": "b44",
+      "Reactance (ohms)": 0.2454,
+      "Susceptance (S)": 7.11218
+    },
+    "l60": {
+      "Source bus": "b34",
+      "Target bus": "b43",
+      "Reactance (ohms)": 0.1681,
+      "Susceptance (S)": 10.38268
+    },
+    "l61": {
+      "Source bus": "b44",
+      "Target bus": "b45",
+      "Reactance (ohms)": 0.0901,
+      "Susceptance (S)": 19.37102
+    },
+    "l62": {
+      "Source bus": "b45",
+      "Target bus": "b46",
+      "Reactance (ohms)": 0.1356,
+      "Susceptance (S)": 12.87116
+    },
+    "l63": {
+      "Source bus": "b46",
+      "Target bus": "b47",
+      "Reactance (ohms)": 0.127,
+      "Susceptance (S)": 13.74275
+    },
+    "l64": {
+      "Source bus": "b46",
+      "Target bus": "b48",
+      "Reactance (ohms)": 0.189,
+      "Susceptance (S)": 9.23455
+    },
+    "l65": {
+      "Source bus": "b47",
+      "Target bus": "b49",
+      "Reactance (ohms)": 0.0625,
+      "Susceptance (S)": 27.92527
+    },
+    "l66": {
+      "Source bus": "b42",
+      "Target bus": "b49",
+      "Reactance (ohms)": 0.323,
+      "Susceptance (S)": 5.4035
+    },
+    "l67": {
+      "Source bus": "b42",
+      "Target bus": "b49",
+      "Reactance (ohms)": 0.323,
+      "Susceptance (S)": 5.4035
+    },
+    "l68": {
+      "Source bus": "b45",
+      "Target bus": "b49",
+      "Reactance (ohms)": 0.186,
+      "Susceptance (S)": 9.38349
+    },
+    "l69": {
+      "Source bus": "b48",
+      "Target bus": "b49",
+      "Reactance (ohms)": 0.0505,
+      "Susceptance (S)": 34.56098
+    },
+    "l70": {
+      "Source bus": "b49",
+      "Target bus": "b50",
+      "Reactance (ohms)": 0.0752,
+      "Susceptance (S)": 23.20917
+    },
+    "l71": {
+      "Source bus": "b49",
+      "Target bus": "b51",
+      "Reactance (ohms)": 0.137,
+      "Susceptance (S)": 12.73963
+    },
+    "l72": {
+      "Source bus": "b51",
+      "Target bus": "b52",
+      "Reactance (ohms)": 0.0588,
+      "Susceptance (S)": 29.68247
+    },
+    "l73": {
+      "Source bus": "b52",
+      "Target bus": "b53",
+      "Reactance (ohms)": 0.1635,
+      "Susceptance (S)": 10.6748
+    },
+    "l74": {
+      "Source bus": "b53",
+      "Target bus": "b54",
+      "Reactance (ohms)": 0.122,
+      "Susceptance (S)": 14.30598
+    },
+    "l75": {
+      "Source bus": "b49",
+      "Target bus": "b54",
+      "Reactance (ohms)": 0.289,
+      "Susceptance (S)": 6.0392
+    },
+    "l76": {
+      "Source bus": "b49",
+      "Target bus": "b54",
+      "Reactance (ohms)": 0.291,
+      "Susceptance (S)": 5.9977
+    },
+    "l77": {
+      "Source bus": "b54",
+      "Target bus": "b55",
+      "Reactance (ohms)": 0.0707,
+      "Susceptance (S)": 24.68641
+    },
+    "l78": {
+      "Source bus": "b54",
+      "Target bus": "b56",
+      "Reactance (ohms)": 0.00955,
+      "Susceptance (S)": 182.75699
+    },
+    "l79": {
+      "Source bus": "b55",
+      "Target bus": "b56",
+      "Reactance (ohms)": 0.0151,
+      "Susceptance (S)": 115.58472
+    },
+    "l80": {
+      "Source bus": "b56",
+      "Target bus": "b57",
+      "Reactance (ohms)": 0.0966,
+      "Susceptance (S)": 18.06759
+    },
+    "l81": {
+      "Source bus": "b50",
+      "Target bus": "b57",
+      "Reactance (ohms)": 0.134,
+      "Susceptance (S)": 13.02485
+    },
+    "l82": {
+      "Source bus": "b56",
+      "Target bus": "b58",
+      "Reactance (ohms)": 0.0966,
+      "Susceptance (S)": 18.06759
+    },
+    "l83": {
+      "Source bus": "b51",
+      "Target bus": "b58",
+      "Reactance (ohms)": 0.0719,
+      "Susceptance (S)": 24.2744
+    },
+    "l84": {
+      "Source bus": "b54",
+      "Target bus": "b59",
+      "Reactance (ohms)": 0.2293,
+      "Susceptance (S)": 7.61155
+    },
+    "l85": {
+      "Source bus": "b56",
+      "Target bus": "b59",
+      "Reactance (ohms)": 0.251,
+      "Susceptance (S)": 6.9535
+    },
+    "l86": {
+      "Source bus": "b56",
+      "Target bus": "b59",
+      "Reactance (ohms)": 0.239,
+      "Susceptance (S)": 7.30263
+    },
+    "l87": {
+      "Source bus": "b55",
+      "Target bus": "b59",
+      "Reactance (ohms)": 0.2158,
+      "Susceptance (S)": 8.08772
+    },
+    "l88": {
+      "Source bus": "b59",
+      "Target bus": "b60",
+      "Reactance (ohms)": 0.145,
+      "Susceptance (S)": 12.03675
+    },
+    "l89": {
+      "Source bus": "b59",
+      "Target bus": "b61",
+      "Reactance (ohms)": 0.15,
+      "Susceptance (S)": 11.63553
+    },
+    "l90": {
+      "Source bus": "b60",
+      "Target bus": "b61",
+      "Reactance (ohms)": 0.0135,
+      "Susceptance (S)": 129.28365
+    },
+    "l91": {
+      "Source bus": "b60",
+      "Target bus": "b62",
+      "Reactance (ohms)": 0.0561,
+      "Susceptance (S)": 31.11104
+    },
+    "l92": {
+      "Source bus": "b61",
+      "Target bus": "b62",
+      "Reactance (ohms)": 0.0376,
+      "Susceptance (S)": 46.41833
+    },
+    "l93": {
+      "Source bus": "b63",
+      "Target bus": "b59",
+      "Reactance (ohms)": 0.0386,
+      "Susceptance (S)": 45.21578
+    },
+    "l94": {
+      "Source bus": "b63",
+      "Target bus": "b64",
+      "Reactance (ohms)": 0.02,
+      "Susceptance (S)": 87.26646
+    },
+    "l95": {
+      "Source bus": "b64",
+      "Target bus": "b61",
+      "Reactance (ohms)": 0.0268,
+      "Susceptance (S)": 65.12423
+    },
+    "l96": {
+      "Source bus": "b38",
+      "Target bus": "b65",
+      "Reactance (ohms)": 0.0986,
+      "Susceptance (S)": 17.70111
+    },
+    "l97": {
+      "Source bus": "b64",
+      "Target bus": "b65",
+      "Reactance (ohms)": 0.0302,
+      "Susceptance (S)": 57.79236
+    },
+    "l98": {
+      "Source bus": "b49",
+      "Target bus": "b66",
+      "Reactance (ohms)": 0.0919,
+      "Susceptance (S)": 18.99161
+    },
+    "l99": {
+      "Source bus": "b49",
+      "Target bus": "b66",
+      "Reactance (ohms)": 0.0919,
+      "Susceptance (S)": 18.99161
+    },
+    "l100": {
+      "Source bus": "b62",
+      "Target bus": "b66",
+      "Reactance (ohms)": 0.218,
+      "Susceptance (S)": 8.0061
+    },
+    "l101": {
+      "Source bus": "b62",
+      "Target bus": "b67",
+      "Reactance (ohms)": 0.117,
+      "Susceptance (S)": 14.91734
+    },
+    "l102": {
+      "Source bus": "b65",
+      "Target bus": "b66",
+      "Reactance (ohms)": 0.037,
+      "Susceptance (S)": 47.17106
+    },
+    "l103": {
+      "Source bus": "b66",
+      "Target bus": "b67",
+      "Reactance (ohms)": 0.1015,
+      "Susceptance (S)": 17.19536
+    },
+    "l104": {
+      "Source bus": "b65",
+      "Target bus": "b68",
+      "Reactance (ohms)": 0.016,
+      "Susceptance (S)": 109.08308
+    },
+    "l105": {
+      "Source bus": "b47",
+      "Target bus": "b69",
+      "Reactance (ohms)": 0.2778,
+      "Susceptance (S)": 6.28268
+    },
+    "l106": {
+      "Source bus": "b49",
+      "Target bus": "b69",
+      "Reactance (ohms)": 0.324,
+      "Susceptance (S)": 5.38682
+    },
+    "l107": {
+      "Source bus": "b68",
+      "Target bus": "b69",
+      "Reactance (ohms)": 0.037,
+      "Susceptance (S)": 47.17106
+    },
+    "l108": {
+      "Source bus": "b69",
+      "Target bus": "b70",
+      "Reactance (ohms)": 0.127,
+      "Susceptance (S)": 13.74275
+    },
+    "l109": {
+      "Source bus": "b24",
+      "Target bus": "b70",
+      "Reactance (ohms)": 0.4115,
+      "Susceptance (S)": 4.24138
+    },
+    "l110": {
+      "Source bus": "b70",
+      "Target bus": "b71",
+      "Reactance (ohms)": 0.0355,
+      "Susceptance (S)": 49.1642
+    },
+    "l111": {
+      "Source bus": "b24",
+      "Target bus": "b72",
+      "Reactance (ohms)": 0.196,
+      "Susceptance (S)": 8.90474
+    },
+    "l112": {
+      "Source bus": "b71",
+      "Target bus": "b72",
+      "Reactance (ohms)": 0.18,
+      "Susceptance (S)": 9.69627
+    },
+    "l113": {
+      "Source bus": "b71",
+      "Target bus": "b73",
+      "Reactance (ohms)": 0.0454,
+      "Susceptance (S)": 38.44338
+    },
+    "l114": {
+      "Source bus": "b70",
+      "Target bus": "b74",
+      "Reactance (ohms)": 0.1323,
+      "Susceptance (S)": 13.19221
+    },
+    "l115": {
+      "Source bus": "b70",
+      "Target bus": "b75",
+      "Reactance (ohms)": 0.141,
+      "Susceptance (S)": 12.37822
+    },
+    "l116": {
+      "Source bus": "b69",
+      "Target bus": "b75",
+      "Reactance (ohms)": 0.122,
+      "Susceptance (S)": 14.30598
+    },
+    "l117": {
+      "Source bus": "b74",
+      "Target bus": "b75",
+      "Reactance (ohms)": 0.0406,
+      "Susceptance (S)": 42.98841
+    },
+    "l118": {
+      "Source bus": "b76",
+      "Target bus": "b77",
+      "Reactance (ohms)": 0.148,
+      "Susceptance (S)": 11.79277
+    },
+    "l119": {
+      "Source bus": "b69",
+      "Target bus": "b77",
+      "Reactance (ohms)": 0.101,
+      "Susceptance (S)": 17.28049
+    },
+    "l120": {
+      "Source bus": "b75",
+      "Target bus": "b77",
+      "Reactance (ohms)": 0.1999,
+      "Susceptance (S)": 8.73101
+    },
+    "l121": {
+      "Source bus": "b77",
+      "Target bus": "b78",
+      "Reactance (ohms)": 0.0124,
+      "Susceptance (S)": 140.75236
+    },
+    "l122": {
+      "Source bus": "b78",
+      "Target bus": "b79",
+      "Reactance (ohms)": 0.0244,
+      "Susceptance (S)": 71.52989
+    },
+    "l123": {
+      "Source bus": "b77",
+      "Target bus": "b80",
+      "Reactance (ohms)": 0.0485,
+      "Susceptance (S)": 35.98617
+    },
+    "l124": {
+      "Source bus": "b77",
+      "Target bus": "b80",
+      "Reactance (ohms)": 0.105,
+      "Susceptance (S)": 16.62218
+    },
+    "l125": {
+      "Source bus": "b79",
+      "Target bus": "b80",
+      "Reactance (ohms)": 0.0704,
+      "Susceptance (S)": 24.79161
+    },
+    "l126": {
+      "Source bus": "b68",
+      "Target bus": "b81",
+      "Reactance (ohms)": 0.0202,
+      "Susceptance (S)": 86.40244
+    },
+    "l127": {
+      "Source bus": "b81",
+      "Target bus": "b80",
+      "Reactance (ohms)": 0.037,
+      "Susceptance (S)": 47.17106
+    },
+    "l128": {
+      "Source bus": "b77",
+      "Target bus": "b82",
+      "Reactance (ohms)": 0.0853,
+      "Susceptance (S)": 20.46107
+    },
+    "l129": {
+      "Source bus": "b82",
+      "Target bus": "b83",
+      "Reactance (ohms)": 0.03665,
+      "Susceptance (S)": 47.62153
+    },
+    "l130": {
+      "Source bus": "b83",
+      "Target bus": "b84",
+      "Reactance (ohms)": 0.132,
+      "Susceptance (S)": 13.22219
+    },
+    "l131": {
+      "Source bus": "b83",
+      "Target bus": "b85",
+      "Reactance (ohms)": 0.148,
+      "Susceptance (S)": 11.79277
+    },
+    "l132": {
+      "Source bus": "b84",
+      "Target bus": "b85",
+      "Reactance (ohms)": 0.0641,
+      "Susceptance (S)": 27.22823
+    },
+    "l133": {
+      "Source bus": "b85",
+      "Target bus": "b86",
+      "Reactance (ohms)": 0.123,
+      "Susceptance (S)": 14.18967
+    },
+    "l134": {
+      "Source bus": "b86",
+      "Target bus": "b87",
+      "Reactance (ohms)": 0.2074,
+      "Susceptance (S)": 8.41528
+    },
+    "l135": {
+      "Source bus": "b85",
+      "Target bus": "b88",
+      "Reactance (ohms)": 0.102,
+      "Susceptance (S)": 17.11107
+    },
+    "l136": {
+      "Source bus": "b85",
+      "Target bus": "b89",
+      "Reactance (ohms)": 0.173,
+      "Susceptance (S)": 10.08861
+    },
+    "l137": {
+      "Source bus": "b88",
+      "Target bus": "b89",
+      "Reactance (ohms)": 0.0712,
+      "Susceptance (S)": 24.51305
+    },
+    "l138": {
+      "Source bus": "b89",
+      "Target bus": "b90",
+      "Reactance (ohms)": 0.188,
+      "Susceptance (S)": 9.28367
+    },
+    "l139": {
+      "Source bus": "b89",
+      "Target bus": "b90",
+      "Reactance (ohms)": 0.0997,
+      "Susceptance (S)": 17.50581
+    },
+    "l140": {
+      "Source bus": "b90",
+      "Target bus": "b91",
+      "Reactance (ohms)": 0.0836,
+      "Susceptance (S)": 20.87714
+    },
+    "l141": {
+      "Source bus": "b89",
+      "Target bus": "b92",
+      "Reactance (ohms)": 0.0505,
+      "Susceptance (S)": 34.56098
+    },
+    "l142": {
+      "Source bus": "b89",
+      "Target bus": "b92",
+      "Reactance (ohms)": 0.1581,
+      "Susceptance (S)": 11.0394
+    },
+    "l143": {
+      "Source bus": "b91",
+      "Target bus": "b92",
+      "Reactance (ohms)": 0.1272,
+      "Susceptance (S)": 13.72114
+    },
+    "l144": {
+      "Source bus": "b92",
+      "Target bus": "b93",
+      "Reactance (ohms)": 0.0848,
+      "Susceptance (S)": 20.58171
+    },
+    "l145": {
+      "Source bus": "b92",
+      "Target bus": "b94",
+      "Reactance (ohms)": 0.158,
+      "Susceptance (S)": 11.04639
+    },
+    "l146": {
+      "Source bus": "b93",
+      "Target bus": "b94",
+      "Reactance (ohms)": 0.0732,
+      "Susceptance (S)": 23.8433
+    },
+    "l147": {
+      "Source bus": "b94",
+      "Target bus": "b95",
+      "Reactance (ohms)": 0.0434,
+      "Susceptance (S)": 40.21496
+    },
+    "l148": {
+      "Source bus": "b80",
+      "Target bus": "b96",
+      "Reactance (ohms)": 0.182,
+      "Susceptance (S)": 9.58972
+    },
+    "l149": {
+      "Source bus": "b82",
+      "Target bus": "b96",
+      "Reactance (ohms)": 0.053,
+      "Susceptance (S)": 32.93074
+    },
+    "l150": {
+      "Source bus": "b94",
+      "Target bus": "b96",
+      "Reactance (ohms)": 0.0869,
+      "Susceptance (S)": 20.08434
+    },
+    "l151": {
+      "Source bus": "b80",
+      "Target bus": "b97",
+      "Reactance (ohms)": 0.0934,
+      "Susceptance (S)": 18.68661
+    },
+    "l152": {
+      "Source bus": "b80",
+      "Target bus": "b98",
+      "Reactance (ohms)": 0.108,
+      "Susceptance (S)": 16.16046
+    },
+    "l153": {
+      "Source bus": "b80",
+      "Target bus": "b99",
+      "Reactance (ohms)": 0.206,
+      "Susceptance (S)": 8.47247
+    },
+    "l154": {
+      "Source bus": "b92",
+      "Target bus": "b100",
+      "Reactance (ohms)": 0.295,
+      "Susceptance (S)": 5.91637
+    },
+    "l155": {
+      "Source bus": "b94",
+      "Target bus": "b100",
+      "Reactance (ohms)": 0.058,
+      "Susceptance (S)": 30.09188
+    },
+    "l156": {
+      "Source bus": "b95",
+      "Target bus": "b96",
+      "Reactance (ohms)": 0.0547,
+      "Susceptance (S)": 31.9073
+    },
+    "l157": {
+      "Source bus": "b96",
+      "Target bus": "b97",
+      "Reactance (ohms)": 0.0885,
+      "Susceptance (S)": 19.72123
+    },
+    "l158": {
+      "Source bus": "b98",
+      "Target bus": "b100",
+      "Reactance (ohms)": 0.179,
+      "Susceptance (S)": 9.75044
+    },
+    "l159": {
+      "Source bus": "b99",
+      "Target bus": "b100",
+      "Reactance (ohms)": 0.0813,
+      "Susceptance (S)": 21.46776
+    },
+    "l160": {
+      "Source bus": "b100",
+      "Target bus": "b101",
+      "Reactance (ohms)": 0.1262,
+      "Susceptance (S)": 13.82987
+    },
+    "l161": {
+      "Source bus": "b92",
+      "Target bus": "b102",
+      "Reactance (ohms)": 0.0559,
+      "Susceptance (S)": 31.22235
+    },
+    "l162": {
+      "Source bus": "b101",
+      "Target bus": "b102",
+      "Reactance (ohms)": 0.112,
+      "Susceptance (S)": 15.5833
+    },
+    "l163": {
+      "Source bus": "b100",
+      "Target bus": "b103",
+      "Reactance (ohms)": 0.0525,
+      "Susceptance (S)": 33.24437
+    },
+    "l164": {
+      "Source bus": "b100",
+      "Target bus": "b104",
+      "Reactance (ohms)": 0.204,
+      "Susceptance (S)": 8.55554
+    },
+    "l165": {
+      "Source bus": "b103",
+      "Target bus": "b104",
+      "Reactance (ohms)": 0.1584,
+      "Susceptance (S)": 11.01849
+    },
+    "l166": {
+      "Source bus": "b103",
+      "Target bus": "b105",
+      "Reactance (ohms)": 0.1625,
+      "Susceptance (S)": 10.74049
+    },
+    "l167": {
+      "Source bus": "b100",
+      "Target bus": "b106",
+      "Reactance (ohms)": 0.229,
+      "Susceptance (S)": 7.62153
+    },
+    "l168": {
+      "Source bus": "b104",
+      "Target bus": "b105",
+      "Reactance (ohms)": 0.0378,
+      "Susceptance (S)": 46.17273
+    },
+    "l169": {
+      "Source bus": "b105",
+      "Target bus": "b106",
+      "Reactance (ohms)": 0.0547,
+      "Susceptance (S)": 31.9073
+    },
+    "l170": {
+      "Source bus": "b105",
+      "Target bus": "b107",
+      "Reactance (ohms)": 0.183,
+      "Susceptance (S)": 9.53732
+    },
+    "l171": {
+      "Source bus": "b105",
+      "Target bus": "b108",
+      "Reactance (ohms)": 0.0703,
+      "Susceptance (S)": 24.82687
+    },
+    "l172": {
+      "Source bus": "b106",
+      "Target bus": "b107",
+      "Reactance (ohms)": 0.183,
+      "Susceptance (S)": 9.53732
+    },
+    "l173": {
+      "Source bus": "b108",
+      "Target bus": "b109",
+      "Reactance (ohms)": 0.0288,
+      "Susceptance (S)": 60.60171
+    },
+    "l174": {
+      "Source bus": "b103",
+      "Target bus": "b110",
+      "Reactance (ohms)": 0.1813,
+      "Susceptance (S)": 9.62675
+    },
+    "l175": {
+      "Source bus": "b109",
+      "Target bus": "b110",
+      "Reactance (ohms)": 0.0762,
+      "Susceptance (S)": 22.90458
+    },
+    "l176": {
+      "Source bus": "b110",
+      "Target bus": "b111",
+      "Reactance (ohms)": 0.0755,
+      "Susceptance (S)": 23.11694
+    },
+    "l177": {
+      "Source bus": "b110",
+      "Target bus": "b112",
+      "Reactance (ohms)": 0.064,
+      "Susceptance (S)": 27.27077
+    },
+    "l178": {
+      "Source bus": "b17",
+      "Target bus": "b113",
+      "Reactance (ohms)": 0.0301,
+      "Susceptance (S)": 57.98436
+    },
+    "l179": {
+      "Source bus": "b32",
+      "Target bus": "b113",
+      "Reactance (ohms)": 0.203,
+      "Susceptance (S)": 8.59768
+    },
+    "l180": {
+      "Source bus": "b32",
+      "Target bus": "b114",
+      "Reactance (ohms)": 0.0612,
+      "Susceptance (S)": 28.51845
+    },
+    "l181": {
+      "Source bus": "b27",
+      "Target bus": "b115",
+      "Reactance (ohms)": 0.0741,
+      "Susceptance (S)": 23.5537
+    },
+    "l182": {
+      "Source bus": "b114",
+      "Target bus": "b115",
+      "Reactance (ohms)": 0.0104,
+      "Susceptance (S)": 167.82012
+    },
+    "l183": {
+      "Source bus": "b68",
+      "Target bus": "b116",
+      "Reactance (ohms)": 0.00405,
+      "Susceptance (S)": 430.94549
+    },
+    "l184": {
+      "Source bus": "b12",
+      "Target bus": "b117",
+      "Reactance (ohms)": 0.14,
+      "Susceptance (S)": 12.46664
+    },
+    "l185": {
+      "Source bus": "b75",
+      "Target bus": "b118",
+      "Reactance (ohms)": 0.0481,
+      "Susceptance (S)": 36.28543
+    },
+    "l186": {
+      "Source bus": "b76",
+      "Target bus": "b118",
+      "Reactance (ohms)": 0.0544,
+      "Susceptance (S)": 32.08326
+    }
+  },
+  "Contingencies": {
+    "c1": {
+      "Affected lines": [
+        "l1"
+      ]
+    },
+    "c2": {
+      "Affected lines": [
+        "l2"
+      ]
+    },
+    "c3": {
+      "Affected lines": [
+        "l3"
+      ]
+    },
+    "c4": {
+      "Affected lines": [
+        "l4"
+      ]
+    },
+    "c5": {
+      "Affected lines": [
+        "l5"
+      ]
+    },
+    "c6": {
+      "Affected lines": [
+        "l6"
+      ]
+    },
+    "c8": {
+      "Affected lines": [
+        "l8"
+      ]
+    },
+    "c10": {
+      "Affected lines": [
+        "l10"
+      ]
+    },
+    "c11": {
+      "Affected lines": [
+        "l11"
+      ]
+    },
+    "c12": {
+      "Affected lines": [
+        "l12"
+      ]
+    },
+    "c13": {
+      "Affected lines": [
+        "l13"
+      ]
+    },
+    "c14": {
+      "Affected lines": [
+        "l14"
+      ]
+    },
+    "c15": {
+      "Affected lines": [
+        "l15"
+      ]
+    },
+    "c16": {
+      "Affected lines": [
+        "l16"
+      ]
+    },
+    "c17": {
+      "Affected lines": [
+        "l17"
+      ]
+    },
+    "c18": {
+      "Affected lines": [
+        "l18"
+      ]
+    },
+    "c19": {
+      "Affected lines": [
+        "l19"
+      ]
+    },
+    "c20": {
+      "Affected lines": [
+        "l20"
+      ]
+    },
+    "c21": {
+      "Affected lines": [
+        "l21"
+      ]
+    },
+    "c22": {
+      "Affected lines": [
+        "l22"
+      ]
+    },
+    "c23": {
+      "Affected lines": [
+        "l23"
+      ]
+    },
+    "c24": {
+      "Affected lines": [
+        "l24"
+      ]
+    },
+    "c25": {
+      "Affected lines": [
+        "l25"
+      ]
+    },
+    "c26": {
+      "Affected lines": [
+        "l26"
+      ]
+    },
+    "c27": {
+      "Affected lines": [
+        "l27"
+      ]
+    },
+    "c28": {
+      "Affected lines": [
+        "l28"
+      ]
+    },
+    "c29": {
+      "Affected lines": [
+        "l29"
+      ]
+    },
+    "c30": {
+      "Affected lines": [
+        "l30"
+      ]
+    },
+    "c31": {
+      "Affected lines": [
+        "l31"
+      ]
+    },
+    "c32": {
+      "Affected lines": [
+        "l32"
+      ]
+    },
+    "c33": {
+      "Affected lines": [
+        "l33"
+      ]
+    },
+    "c34": {
+      "Affected lines": [
+        "l34"
+      ]
+    },
+    "c35": {
+      "Affected lines": [
+        "l35"
+      ]
+    },
+    "c36": {
+      "Affected lines": [
+        "l36"
+      ]
+    },
+    "c37": {
+      "Affected lines": [
+        "l37"
+      ]
+    },
+    "c38": {
+      "Affected lines": [
+        "l38"
+      ]
+    },
+    "c39": {
+      "Affected lines": [
+        "l39"
+      ]
+    },
+    "c40": {
+      "Affected lines": [
+        "l40"
+      ]
+    },
+    "c41": {
+      "Affected lines": [
+        "l41"
+      ]
+    },
+    "c42": {
+      "Affected lines": [
+        "l42"
+      ]
+    },
+    "c43": {
+      "Affected lines": [
+        "l43"
+      ]
+    },
+    "c44": {
+      "Affected lines": [
+        "l44"
+      ]
+    },
+    "c45": {
+      "Affected lines": [
+        "l45"
+      ]
+    },
+    "c46": {
+      "Affected lines": [
+        "l46"
+      ]
+    },
+    "c47": {
+      "Affected lines": [
+        "l47"
+      ]
+    },
+    "c48": {
+      "Affected lines": [
+        "l48"
+      ]
+    },
+    "c49": {
+      "Affected lines": [
+        "l49"
+      ]
+    },
+    "c50": {
+      "Affected lines": [
+        "l50"
+      ]
+    },
+    "c51": {
+      "Affected lines": [
+        "l51"
+      ]
+    },
+    "c52": {
+      "Affected lines": [
+        "l52"
+      ]
+    },
+    "c53": {
+      "Affected lines": [
+        "l53"
+      ]
+    },
+    "c54": {
+      "Affected lines": [
+        "l54"
+      ]
+    },
+    "c55": {
+      "Affected lines": [
+        "l55"
+      ]
+    },
+    "c56": {
+      "Affected lines": [
+        "l56"
+      ]
+    },
+    "c57": {
+      "Affected lines": [
+        "l57"
+      ]
+    },
+    "c58": {
+      "Affected lines": [
+        "l58"
+      ]
+    },
+    "c59": {
+      "Affected lines": [
+        "l59"
+      ]
+    },
+    "c60": {
+      "Affected lines": [
+        "l60"
+      ]
+    },
+    "c61": {
+      "Affected lines": [
+        "l61"
+      ]
+    },
+    "c62": {
+      "Affected lines": [
+        "l62"
+      ]
+    },
+    "c63": {
+      "Affected lines": [
+        "l63"
+      ]
+    },
+    "c64": {
+      "Affected lines": [
+        "l64"
+      ]
+    },
+    "c65": {
+      "Affected lines": [
+        "l65"
+      ]
+    },
+    "c66": {
+      "Affected lines": [
+        "l66"
+      ]
+    },
+    "c67": {
+      "Affected lines": [
+        "l67"
+      ]
+    },
+    "c68": {
+      "Affected lines": [
+        "l68"
+      ]
+    },
+    "c69": {
+      "Affected lines": [
+        "l69"
+      ]
+    },
+    "c70": {
+      "Affected lines": [
+        "l70"
+      ]
+    },
+    "c71": {
+      "Affected lines": [
+        "l71"
+      ]
+    },
+    "c72": {
+      "Affected lines": [
+        "l72"
+      ]
+    },
+    "c73": {
+      "Affected lines": [
+        "l73"
+      ]
+    },
+    "c74": {
+      "Affected lines": [
+        "l74"
+      ]
+    },
+    "c75": {
+      "Affected lines": [
+        "l75"
+      ]
+    },
+    "c76": {
+      "Affected lines": [
+        "l76"
+      ]
+    },
+    "c77": {
+      "Affected lines": [
+        "l77"
+      ]
+    },
+    "c78": {
+      "Affected lines": [
+        "l78"
+      ]
+    },
+    "c79": {
+      "Affected lines": [
+        "l79"
+      ]
+    },
+    "c80": {
+      "Affected lines": [
+        "l80"
+      ]
+    },
+    "c81": {
+      "Affected lines": [
+        "l81"
+      ]
+    },
+    "c82": {
+      "Affected lines": [
+        "l82"
+      ]
+    },
+    "c83": {
+      "Affected lines": [
+        "l83"
+      ]
+    },
+    "c84": {
+      "Affected lines": [
+        "l84"
+      ]
+    },
+    "c85": {
+      "Affected lines": [
+        "l85"
+      ]
+    },
+    "c86": {
+      "Affected lines": [
+        "l86"
+      ]
+    },
+    "c87": {
+      "Affected lines": [
+        "l87"
+      ]
+    },
+    "c88": {
+      "Affected lines": [
+        "l88"
+      ]
+    },
+    "c89": {
+      "Affected lines": [
+        "l89"
+      ]
+    },
+    "c90": {
+      "Affected lines": [
+        "l90"
+      ]
+    },
+    "c91": {
+      "Affected lines": [
+        "l91"
+      ]
+    },
+    "c92": {
+      "Affected lines": [
+        "l92"
+      ]
+    },
+    "c93": {
+      "Affected lines": [
+        "l93"
+      ]
+    },
+    "c94": {
+      "Affected lines": [
+        "l94"
+      ]
+    },
+    "c95": {
+      "Affected lines": [
+        "l95"
+      ]
+    },
+    "c96": {
+      "Affected lines": [
+        "l96"
+      ]
+    },
+    "c97": {
+      "Affected lines": [
+        "l97"
+      ]
+    },
+    "c98": {
+      "Affected lines": [
+        "l98"
+      ]
+    },
+    "c99": {
+      "Affected lines": [
+        "l99"
+      ]
+    },
+    "c100": {
+      "Affected lines": [
+        "l100"
+      ]
+    },
+    "c101": {
+      "Affected lines": [
+        "l101"
+      ]
+    },
+    "c102": {
+      "Affected lines": [
+        "l102"
+      ]
+    },
+    "c103": {
+      "Affected lines": [
+        "l103"
+      ]
+    },
+    "c104": {
+      "Affected lines": [
+        "l104"
+      ]
+    },
+    "c105": {
+      "Affected lines": [
+        "l105"
+      ]
+    },
+    "c106": {
+      "Affected lines": [
+        "l106"
+      ]
+    },
+    "c107": {
+      "Affected lines": [
+        "l107"
+      ]
+    },
+    "c108": {
+      "Affected lines": [
+        "l108"
+      ]
+    },
+    "c109": {
+      "Affected lines": [
+        "l109"
+      ]
+    },
+    "c110": {
+      "Affected lines": [
+        "l110"
+      ]
+    },
+    "c111": {
+      "Affected lines": [
+        "l111"
+      ]
+    },
+    "c112": {
+      "Affected lines": [
+        "l112"
+      ]
+    },
+    "c114": {
+      "Affected lines": [
+        "l114"
+      ]
+    },
+    "c115": {
+      "Affected lines": [
+        "l115"
+      ]
+    },
+    "c116": {
+      "Affected lines": [
+        "l116"
+      ]
+    },
+    "c117": {
+      "Affected lines": [
+        "l117"
+      ]
+    },
+    "c118": {
+      "Affected lines": [
+        "l118"
+      ]
+    },
+    "c119": {
+      "Affected lines": [
+        "l119"
+      ]
+    },
+    "c120": {
+      "Affected lines": [
+        "l120"
+      ]
+    },
+    "c121": {
+      "Affected lines": [
+        "l121"
+      ]
+    },
+    "c122": {
+      "Affected lines": [
+        "l122"
+      ]
+    },
+    "c123": {
+      "Affected lines": [
+        "l123"
+      ]
+    },
+    "c124": {
+      "Affected lines": [
+        "l124"
+      ]
+    },
+    "c125": {
+      "Affected lines": [
+        "l125"
+      ]
+    },
+    "c126": {
+      "Affected lines": [
+        "l126"
+      ]
+    },
+    "c127": {
+      "Affected lines": [
+        "l127"
+      ]
+    },
+    "c128": {
+      "Affected lines": [
+        "l128"
+      ]
+    },
+    "c129": {
+      "Affected lines": [
+        "l129"
+      ]
+    },
+    "c130": {
+      "Affected lines": [
+        "l130"
+      ]
+    },
+    "c131": {
+      "Affected lines": [
+        "l131"
+      ]
+    },
+    "c132": {
+      "Affected lines": [
+        "l132"
+      ]
+    },
+    "c135": {
+      "Affected lines": [
+        "l135"
+      ]
+    },
+    "c136": {
+      "Affected lines": [
+        "l136"
+      ]
+    },
+    "c137": {
+      "Affected lines": [
+        "l137"
+      ]
+    },
+    "c138": {
+      "Affected lines": [
+        "l138"
+      ]
+    },
+    "c139": {
+      "Affected lines": [
+        "l139"
+      ]
+    },
+    "c140": {
+      "Affected lines": [
+        "l140"
+      ]
+    },
+    "c141": {
+      "Affected lines": [
+        "l141"
+      ]
+    },
+    "c142": {
+      "Affected lines": [
+        "l142"
+      ]
+    },
+    "c143": {
+      "Affected lines": [
+        "l143"
+      ]
+    },
+    "c144": {
+      "Affected lines": [
+        "l144"
+      ]
+    },
+    "c145": {
+      "Affected lines": [
+        "l145"
+      ]
+    },
+    "c146": {
+      "Affected lines": [
+        "l146"
+      ]
+    },
+    "c147": {
+      "Affected lines": [
+        "l147"
+      ]
+    },
+    "c148": {
+      "Affected lines": [
+        "l148"
+      ]
+    },
+    "c149": {
+      "Affected lines": [
+        "l149"
+      ]
+    },
+    "c150": {
+      "Affected lines": [
+        "l150"
+      ]
+    },
+    "c151": {
+      "Affected lines": [
+        "l151"
+      ]
+    },
+    "c152": {
+      "Affected lines": [
+        "l152"
+      ]
+    },
+    "c153": {
+      "Affected lines": [
+        "l153"
+      ]
+    },
+    "c154": {
+      "Affected lines": [
+        "l154"
+      ]
+    },
+    "c155": {
+      "Affected lines": [
+        "l155"
+      ]
+    },
+    "c156": {
+      "Affected lines": [
+        "l156"
+      ]
+    },
+    "c157": {
+      "Affected lines": [
+        "l157"
+      ]
+    },
+    "c158": {
+      "Affected lines": [
+        "l158"
+      ]
+    },
+    "c159": {
+      "Affected lines": [
+        "l159"
+      ]
+    },
+    "c160": {
+      "Affected lines": [
+        "l160"
+      ]
+    },
+    "c161": {
+      "Affected lines": [
+        "l161"
+      ]
+    },
+    "c162": {
+      "Affected lines": [
+        "l162"
+      ]
+    },
+    "c163": {
+      "Affected lines": [
+        "l163"
+      ]
+    },
+    "c164": {
+      "Affected lines": [
+        "l164"
+      ]
+    },
+    "c165": {
+      "Affected lines": [
+        "l165"
+      ]
+    },
+    "c166": {
+      "Affected lines": [
+        "l166"
+      ]
+    },
+    "c167": {
+      "Affected lines": [
+        "l167"
+      ]
+    },
+    "c168": {
+      "Affected lines": [
+        "l168"
+      ]
+    },
+    "c169": {
+      "Affected lines": [
+        "l169"
+      ]
+    },
+    "c170": {
+      "Affected lines": [
+        "l170"
+      ]
+    },
+    "c171": {
+      "Affected lines": [
+        "l171"
+      ]
+    },
+    "c172": {
+      "Affected lines": [
+        "l172"
+      ]
+    },
+    "c173": {
+      "Affected lines": [
+        "l173"
+      ]
+    },
+    "c174": {
+      "Affected lines": [
+        "l174"
+      ]
+    },
+    "c175": {
+      "Affected lines": [
+        "l175"
+      ]
+    },
+    "c178": {
+      "Affected lines": [
+        "l178"
+      ]
+    },
+    "c179": {
+      "Affected lines": [
+        "l179"
+      ]
+    },
+    "c180": {
+      "Affected lines": [
+        "l180"
+      ]
+    },
+    "c181": {
+      "Affected lines": [
+        "l181"
+      ]
+    },
+    "c182": {
+      "Affected lines": [
+        "l182"
+      ]
+    },
+    "c185": {
+      "Affected lines": [
+        "l185"
+      ]
+    },
+    "c186": {
+      "Affected lines": [
+        "l186"
+      ]
+    }
+  },
+  "Buses": {
+    "b1": {
+      "Load (MW)": [
+        43.5029,
+        42.72374,
+        41.88011,
+        41.73016,
+        42.11133,
+        43.85044,
+        46.59714,
+        48.14285,
+        49.16586,
+        50.77184,
+        51.01147,
+        50.57704,
+        49.11681,
+        49.0033,
+        48.4904,
+        48.5969,
+        50.64291,
+        54.69989,
+        54.39019,
+        54.01182,
+        53.25507,
+        52.45349,
+        49.72501,
+        47.72805,
+        45.98193,
+        45.40597,
+        45.10327,
+        45.02059,
+        45.07244,
+        46.50885,
+        48.42313,
+        49.32001,
+        49.95483,
+        50.30097,
+        51.06893,
+        49.97025
+      ]
+    },
+    "b2": {
+      "Load (MW)": [
+        17.05996,
+        16.75441,
+        16.42357,
+        16.36477,
+        16.51425,
+        17.19625,
+        18.27339,
+        18.87955,
+        19.28073,
+        19.91052,
+        20.0045,
+        19.83413,
+        19.26149,
+        19.21698,
+        19.01584,
+        19.05761,
+        19.85996,
+        21.45094,
+        21.32949,
+        21.1811,
+        20.88434,
+        20.56999,
+        19.5,
+        18.71688,
+        18.03213,
+        17.80626,
+        17.68756,
+        17.65513,
+        17.67547,
+        18.23877,
+        18.98946,
+        19.34118,
+        19.59013,
+        19.72587,
+        20.02703,
+        19.59618
+      ]
+    },
+    "b3": {
+      "Load (MW)": [
+        33.26692,
+        32.67109,
+        32.02596,
+        31.9113,
+        32.20279,
+        33.53269,
+        35.63311,
+        36.81512,
+        37.59742,
+        38.82552,
+        39.00877,
+        38.67656,
+        37.55991,
+        37.47311,
+        37.08089,
+        37.16234,
+        38.72693,
+        41.82933,
+        41.5925,
+        41.30315,
+        40.72447,
+        40.11149,
+        38.02501,
+        36.49792,
+        35.16266,
+        34.72221,
+        34.49074,
+        34.42751,
+        34.46716,
+        35.56559,
+        37.02945,
+        37.7153,
+        38.20076,
+        38.46545,
+        39.05271,
+        38.21254
+      ]
+    },
+    "b4": {
+      "Load (MW)": [
+        33.26692,
+        32.67109,
+        32.02596,
+        31.9113,
+        32.20279,
+        33.53269,
+        35.63311,
+        36.81512,
+        37.59742,
+        38.82552,
+        39.00877,
+        38.67656,
+        37.55991,
+        37.47311,
+        37.08089,
+        37.16234,
+        38.72693,
+        41.82933,
+        41.5925,
+        41.30315,
+        40.72447,
+        40.11149,
+        38.02501,
+        36.49792,
+        35.16266,
+        34.72221,
+        34.49074,
+        34.42751,
+        34.46716,
+        35.56559,
+        37.02945,
+        37.7153,
+        38.20076,
+        38.46545,
+        39.05271,
+        38.21254
+      ]
+    },
+    "b5": {
+      "Load (MW)": 0.0
+    },
+    "b6": {
+      "Load (MW)": [
+        44.3559,
+        43.56146,
+        42.70129,
+        42.5484,
+        42.93705,
+        44.71025,
+        47.51081,
+        49.08683,
+        50.1299,
+        51.76736,
+        52.0117,
+        51.56875,
+        50.07989,
+        49.96415,
+        49.44119,
+        49.54978,
+        51.63591,
+        55.77244,
+        55.45666,
+        55.07087,
+        54.29929,
+        53.48199,
+        50.70001,
+        48.66389,
+        46.88354,
+        46.29628,
+        45.98765,
+        45.90335,
+        45.95621,
+        47.42079,
+        49.3726,
+        50.28707,
+        50.93434,
+        51.28727,
+        52.07028,
+        50.95006
+      ]
+    },
+    "b7": {
+      "Load (MW)": [
+        16.20696,
+        15.91669,
+        15.60239,
+        15.54653,
+        15.68854,
+        16.33644,
+        17.35972,
+        17.93557,
+        18.31669,
+        18.915,
+        19.00427,
+        18.84243,
+        18.29842,
+        18.25613,
+        18.06505,
+        18.10473,
+        18.86697,
+        20.37839,
+        20.26301,
+        20.12205,
+        19.84013,
+        19.54149,
+        18.525,
+        17.78104,
+        17.13052,
+        16.91595,
+        16.80318,
+        16.77238,
+        16.79169,
+        17.32683,
+        18.03999,
+        18.37412,
+        18.61062,
+        18.73958,
+        19.02568,
+        18.61637
+      ]
+    },
+    "b8": {
+      "Load (MW)": [
+        23.88395,
+        23.45617,
+        22.993,
+        22.91068,
+        23.11995,
+        24.07475,
+        25.58274,
+        26.43137,
+        26.99302,
+        27.87473,
+        28.0063,
+        27.76779,
+        26.96609,
+        26.90377,
+        26.62218,
+        26.68065,
+        27.80395,
+        30.03131,
+        29.86128,
+        29.65355,
+        29.23808,
+        28.79799,
+        27.3,
+        26.20363,
+        25.24498,
+        24.92877,
+        24.76258,
+        24.71719,
+        24.74565,
+        25.53427,
+        26.58525,
+        27.07765,
+        27.42618,
+        27.61622,
+        28.03784,
+        27.43465
+      ]
+    },
+    "b9": {
+      "Load (MW)": 0.0
+    },
+    "b10": {
+      "Load (MW)": 0.0
+    },
+    "b11": {
+      "Load (MW)": [
+        59.70986,
+        58.64042,
+        57.4825,
+        57.27669,
+        57.79987,
+        60.18688,
+        63.95686,
+        66.07843,
+        67.48255,
+        69.68683,
+        70.01574,
+        69.41947,
+        67.41523,
+        67.25943,
+        66.55545,
+        66.70163,
+        69.50987,
+        75.07828,
+        74.6532,
+        74.13386,
+        73.0952,
+        71.99498,
+        68.25001,
+        65.50909,
+        63.11246,
+        62.32192,
+        61.90645,
+        61.79297,
+        61.86413,
+        63.83568,
+        66.46312,
+        67.69413,
+        68.56546,
+        69.04055,
+        70.09461,
+        68.58662
+      ]
+    },
+    "b12": {
+      "Load (MW)": [
+        40.09091,
+        39.37285,
+        38.59539,
+        38.45721,
+        38.80848,
+        40.41119,
+        42.94246,
+        44.36694,
+        45.30971,
+        46.78973,
+        47.01057,
+        46.61022,
+        45.26451,
+        45.1599,
+        44.68723,
+        44.78538,
+        46.67092,
+        50.4097,
+        50.12429,
+        49.77559,
+        49.0782,
+        48.33949,
+        45.82501,
+        43.98467,
+        42.37551,
+        41.84472,
+        41.56576,
+        41.48956,
+        41.53735,
+        42.8611,
+        44.62524,
+        45.45177,
+        46.03681,
+        46.3558,
+        47.06352,
+        46.05101
+      ]
+    },
+    "b13": {
+      "Load (MW)": [
+        29.00193,
+        28.48249,
+        27.92007,
+        27.82011,
+        28.07422,
+        29.23363,
+        31.06476,
+        32.09524,
+        32.77724,
+        33.84789,
+        34.00765,
+        33.71803,
+        32.74454,
+        32.66887,
+        32.32693,
+        32.39793,
+        33.76194,
+        36.46659,
+        36.26012,
+        36.00788,
+        35.50338,
+        34.96899,
+        33.15001,
+        31.8187,
+        30.65462,
+        30.27065,
+        30.06885,
+        30.01373,
+        30.04829,
+        31.0059,
+        32.28209,
+        32.88001,
+        33.30322,
+        33.53398,
+        34.04595,
+        33.3135
+      ]
+    },
+    "b14": {
+      "Load (MW)": [
+        11.94197,
+        11.72808,
+        11.4965,
+        11.45534,
+        11.55997,
+        12.03738,
+        12.79137,
+        13.21569,
+        13.49651,
+        13.93737,
+        14.00315,
+        13.88389,
+        13.48305,
+        13.45189,
+        13.31109,
+        13.34033,
+        13.90197,
+        15.01566,
+        14.93064,
+        14.82677,
+        14.61904,
+        14.399,
+        13.65,
+        13.10182,
+        12.62249,
+        12.46438,
+        12.38129,
+        12.35859,
+        12.37283,
+        12.76714,
+        13.29262,
+        13.53883,
+        13.71309,
+        13.80811,
+        14.01892,
+        13.71732
+      ]
+    },
+    "b15": {
+      "Load (MW)": [
+        76.76982,
+        75.39483,
+        73.90607,
+        73.64146,
+        74.31412,
+        77.38313,
+        82.23024,
+        84.95798,
+        86.76328,
+        89.59736,
+        90.02024,
+        89.25361,
+        86.67673,
+        86.47641,
+        85.57129,
+        85.75924,
+        89.36984,
+        96.52922,
+        95.98268,
+        95.31497,
+        93.97954,
+        92.56498,
+        87.75001,
+        84.22597,
+        81.14459,
+        80.12818,
+        79.59401,
+        79.4481,
+        79.5396,
+        82.07444,
+        85.45258,
+        87.03531,
+        88.15559,
+        88.76642,
+        90.12164,
+        88.18279
+      ]
+    },
+    "b16": {
+      "Load (MW)": [
+        21.32495,
+        20.94301,
+        20.52946,
+        20.45596,
+        20.64281,
+        21.49531,
+        22.84173,
+        23.59944,
+        24.10091,
+        24.88815,
+        25.00562,
+        24.79267,
+        24.07687,
+        24.02123,
+        23.7698,
+        23.82201,
+        24.82496,
+        26.81367,
+        26.66186,
+        26.47638,
+        26.10543,
+        25.71249,
+        24.375,
+        23.3961,
+        22.54016,
+        22.25783,
+        22.10945,
+        22.06892,
+        22.09433,
+        22.79846,
+        23.73683,
+        24.17648,
+        24.48766,
+        24.65734,
+        25.03379,
+        24.49522
+      ]
+    },
+    "b17": {
+      "Load (MW)": [
+        9.38298,
+        9.21492,
+        9.03296,
+        9.00062,
+        9.08284,
+        9.45794,
+        10.05036,
+        10.38375,
+        10.6044,
+        10.95079,
+        11.00247,
+        10.90877,
+        10.59382,
+        10.56934,
+        10.45871,
+        10.48168,
+        10.92298,
+        11.79802,
+        11.73122,
+        11.64961,
+        11.48639,
+        11.3135,
+        10.725,
+        10.29428,
+        9.91767,
+        9.79344,
+        9.72816,
+        9.71032,
+        9.72151,
+        10.03132,
+        10.4442,
+        10.63765,
+        10.77457,
+        10.84923,
+        11.01487,
+        10.7779
+      ]
+    },
+    "b18": {
+      "Load (MW)": [
+        51.17988,
+        50.26322,
+        49.27071,
+        49.09431,
+        49.54275,
+        51.58875,
+        54.82016,
+        56.63865,
+        57.84219,
+        59.73157,
+        60.01349,
+        59.5024,
+        57.78448,
+        57.65094,
+        57.04752,
+        57.17282,
+        59.57989,
+        64.35281,
+        63.98846,
+        63.54331,
+        62.65303,
+        61.70998,
+        58.50001,
+        56.15064,
+        54.09639,
+        53.41879,
+        53.06267,
+        52.9654,
+        53.0264,
+        54.7163,
+        56.96839,
+        58.02354,
+        58.77039,
+        59.17762,
+        60.08109,
+        58.78853
+      ]
+    },
+    "b19": {
+      "Load (MW)": [
+        38.38491,
+        37.69741,
+        36.95304,
+        36.82073,
+        37.15706,
+        38.69157,
+        41.11512,
+        42.47899,
+        43.38164,
+        44.79868,
+        45.01012,
+        44.6268,
+        43.33836,
+        43.23821,
+        42.78564,
+        42.87962,
+        44.68492,
+        48.26461,
+        47.99134,
+        47.65748,
+        46.98977,
+        46.28249,
+        43.87501,
+        42.11298,
+        40.57229,
+        40.06409,
+        39.797,
+        39.72405,
+        39.7698,
+        41.03722,
+        42.72629,
+        43.51766,
+        44.07779,
+        44.38321,
+        45.06082,
+        44.0914
+      ]
+    },
+    "b20": {
+      "Load (MW)": [
+        15.35396,
+        15.07897,
+        14.78121,
+        14.72829,
+        14.86282,
+        15.47663,
+        16.44605,
+        16.9916,
+        17.35266,
+        17.91947,
+        18.00405,
+        17.85072,
+        17.33535,
+        17.29528,
+        17.11426,
+        17.15185,
+        17.87397,
+        19.30584,
+        19.19654,
+        19.06299,
+        18.79591,
+        18.513,
+        17.55,
+        16.84519,
+        16.22892,
+        16.02564,
+        15.9188,
+        15.88962,
+        15.90792,
+        16.41489,
+        17.09052,
+        17.40706,
+        17.63112,
+        17.75328,
+        18.02433,
+        17.63656
+      ]
+    },
+    "b21": {
+      "Load (MW)": [
+        11.94197,
+        11.72808,
+        11.4965,
+        11.45534,
+        11.55997,
+        12.03738,
+        12.79137,
+        13.21569,
+        13.49651,
+        13.93737,
+        14.00315,
+        13.88389,
+        13.48305,
+        13.45189,
+        13.31109,
+        13.34033,
+        13.90197,
+        15.01566,
+        14.93064,
+        14.82677,
+        14.61904,
+        14.399,
+        13.65,
+        13.10182,
+        12.62249,
+        12.46438,
+        12.38129,
+        12.35859,
+        12.37283,
+        12.76714,
+        13.29262,
+        13.53883,
+        13.71309,
+        13.80811,
+        14.01892,
+        13.71732
+      ]
+    },
+    "b22": {
+      "Load (MW)": [
+        8.52998,
+        8.3772,
+        8.21179,
+        8.18238,
+        8.25712,
+        8.59813,
+        9.13669,
+        9.43978,
+        9.64036,
+        9.95526,
+        10.00225,
+        9.91707,
+        9.63075,
+        9.60849,
+        9.50792,
+        9.5288,
+        9.92998,
+        10.72547,
+        10.66474,
+        10.59055,
+        10.44217,
+        10.285,
+        9.75,
+        9.35844,
+        9.01607,
+        8.90313,
+        8.84378,
+        8.82757,
+        8.83773,
+        9.11938,
+        9.49473,
+        9.67059,
+        9.79507,
+        9.86294,
+        10.01352,
+        9.79809
+      ]
+    },
+    "b23": {
+      "Load (MW)": [
+        5.97099,
+        5.86404,
+        5.74825,
+        5.72767,
+        5.77999,
+        6.01869,
+        6.39569,
+        6.60784,
+        6.74826,
+        6.96868,
+        7.00157,
+        6.94195,
+        6.74152,
+        6.72594,
+        6.65554,
+        6.67016,
+        6.95099,
+        7.50783,
+        7.46532,
+        7.41339,
+        7.30952,
+        7.1995,
+        6.825,
+        6.55091,
+        6.31125,
+        6.23219,
+        6.19065,
+        6.1793,
+        6.18641,
+        6.38357,
+        6.64631,
+        6.76941,
+        6.85655,
+        6.90406,
+        7.00946,
+        6.85866
+      ]
+    },
+    "b24": {
+      "Load (MW)": [
+        11.08897,
+        10.89036,
+        10.67532,
+        10.6371,
+        10.73426,
+        11.17756,
+        11.8777,
+        12.27171,
+        12.53247,
+        12.94184,
+        13.00292,
+        12.89219,
+        12.51997,
+        12.49104,
+        12.3603,
+        12.38745,
+        12.90898,
+        13.94311,
+        13.86417,
+        13.76772,
+        13.57482,
+        13.3705,
+        12.675,
+        12.16597,
+        11.72089,
+        11.57407,
+        11.49691,
+        11.47584,
+        11.48905,
+        11.8552,
+        12.34315,
+        12.57177,
+        12.73359,
+        12.82182,
+        13.01757,
+        12.73751
+      ]
+    },
+    "b25": {
+      "Load (MW)": 0.0
+    },
+    "b26": {
+      "Load (MW)": 0.0
+    },
+    "b27": {
+      "Load (MW)": [
+        60.56286,
+        59.47814,
+        58.30368,
+        58.09493,
+        58.62558,
+        61.04669,
+        64.87053,
+        67.02241,
+        68.44659,
+        70.68236,
+        71.01597,
+        70.41118,
+        68.37831,
+        68.22028,
+        67.50624,
+        67.65451,
+        70.50287,
+        76.15083,
+        75.71967,
+        75.19292,
+        74.13942,
+        73.02348,
+        69.22501,
+        66.44493,
+        64.01406,
+        63.21223,
+        62.79083,
+        62.67572,
+        62.74791,
+        64.74762,
+        67.41259,
+        68.66119,
+        69.54496,
+        70.02685,
+        71.09596,
+        69.56642
+      ]
+    },
+    "b28": {
+      "Load (MW)": [
+        14.50097,
+        14.24125,
+        13.96004,
+        13.91005,
+        14.03711,
+        14.61681,
+        15.53238,
+        16.04762,
+        16.38862,
+        16.92395,
+        17.00382,
+        16.85901,
+        16.37227,
+        16.33443,
+        16.16347,
+        16.19897,
+        16.88097,
+        18.2333,
+        18.13006,
+        18.00394,
+        17.75169,
+        17.4845,
+        16.575,
+        15.90935,
+        15.32731,
+        15.13532,
+        15.03442,
+        15.00686,
+        15.02415,
+        15.50295,
+        16.14104,
+        16.44,
+        16.65161,
+        16.76699,
+        17.02298,
+        16.65675
+      ]
+    },
+    "b29": {
+      "Load (MW)": [
+        20.47195,
+        20.10529,
+        19.70829,
+        19.63772,
+        19.8171,
+        20.6355,
+        21.92806,
+        22.65546,
+        23.13687,
+        23.89263,
+        24.0054,
+        23.80096,
+        23.11379,
+        23.06038,
+        22.81901,
+        22.86913,
+        23.83196,
+        25.74113,
+        25.59538,
+        25.41733,
+        25.06121,
+        24.68399,
+        23.4,
+        22.46026,
+        21.63856,
+        21.36751,
+        21.22507,
+        21.18616,
+        21.21056,
+        21.88652,
+        22.78736,
+        23.20942,
+        23.50816,
+        23.67105,
+        24.03244,
+        23.51541
+      ]
+    },
+    "b30": {
+      "Load (MW)": 0.0
+    },
+    "b31": {
+      "Load (MW)": [
+        36.67892,
+        36.02197,
+        35.31068,
+        35.18425,
+        35.50564,
+        36.97194,
+        39.28778,
+        40.59103,
+        41.45357,
+        42.80763,
+        43.00967,
+        42.64339,
+        41.41221,
+        41.31651,
+        40.88406,
+        40.97386,
+        42.69892,
+        46.11952,
+        45.85839,
+        45.53937,
+        44.90134,
+        44.22549,
+        41.92501,
+        40.2413,
+        38.76908,
+        38.28346,
+        38.02825,
+        37.95854,
+        38.00225,
+        39.21335,
+        40.82734,
+        41.58354,
+        42.11878,
+        42.41062,
+        43.05811,
+        42.13178
+      ]
+    },
+    "b32": {
+      "Load (MW)": [
+        50.32688,
+        49.4255,
+        48.44954,
+        48.27607,
+        48.71703,
+        50.72894,
+        53.90649,
+        55.69468,
+        56.87815,
+        58.73604,
+        59.01327,
+        58.5107,
+        56.82141,
+        56.69009,
+        56.09673,
+        56.21994,
+        58.58689,
+        63.28027,
+        62.92198,
+        62.48426,
+        61.60881,
+        60.68148,
+        57.52501,
+        55.2148,
+        53.19479,
+        52.52847,
+        52.17829,
+        52.08264,
+        52.14263,
+        53.80436,
+        56.01892,
+        57.05648,
+        57.79089,
+        58.19132,
+        59.07974,
+        57.80872
+      ]
+    },
+    "b33": {
+      "Load (MW)": [
+        19.61896,
+        19.26757,
+        18.88711,
+        18.81948,
+        18.99139,
+        19.77569,
+        21.0144,
+        21.71148,
+        22.17284,
+        22.8971,
+        23.00517,
+        22.80926,
+        22.15072,
+        22.09953,
+        21.86822,
+        21.91625,
+        22.83896,
+        24.66858,
+        24.52891,
+        24.35827,
+        24.01699,
+        23.65549,
+        22.425,
+        21.52441,
+        20.73695,
+        20.4772,
+        20.34069,
+        20.3034,
+        20.32679,
+        20.97458,
+        21.83788,
+        22.24236,
+        22.52865,
+        22.68475,
+        23.03108,
+        22.5356
+      ]
+    },
+    "b34": {
+      "Load (MW)": [
+        50.32688,
+        49.4255,
+        48.44954,
+        48.27607,
+        48.71703,
+        50.72894,
+        53.90649,
+        55.69468,
+        56.87815,
+        58.73604,
+        59.01327,
+        58.5107,
+        56.82141,
+        56.69009,
+        56.09673,
+        56.21994,
+        58.58689,
+        63.28027,
+        62.92198,
+        62.48426,
+        61.60881,
+        60.68148,
+        57.52501,
+        55.2148,
+        53.19479,
+        52.52847,
+        52.17829,
+        52.08264,
+        52.14263,
+        53.80436,
+        56.01892,
+        57.05648,
+        57.79089,
+        58.19132,
+        59.07974,
+        57.80872
+      ]
+    },
+    "b35": {
+      "Load (MW)": [
+        28.14894,
+        27.64477,
+        27.09889,
+        27.00187,
+        27.24851,
+        28.37382,
+        30.15109,
+        31.15126,
+        31.8132,
+        32.85236,
+        33.00742,
+        32.72632,
+        31.78147,
+        31.70802,
+        31.37614,
+        31.44505,
+        32.76894,
+        35.39405,
+        35.19365,
+        34.94882,
+        34.45916,
+        33.94049,
+        32.17501,
+        30.88285,
+        29.75302,
+        29.38033,
+        29.18447,
+        29.13097,
+        29.16452,
+        30.09396,
+        31.33261,
+        31.91295,
+        32.32372,
+        32.54769,
+        33.0446,
+        32.33369
+      ]
+    },
+    "b36": {
+      "Load (MW)": [
+        26.44294,
+        25.96933,
+        25.45654,
+        25.36539,
+        25.59709,
+        26.65419,
+        28.32375,
+        29.2633,
+        29.88513,
+        30.86131,
+        31.00697,
+        30.74291,
+        29.85532,
+        29.78632,
+        29.47455,
+        29.53929,
+        30.78294,
+        33.24895,
+        33.0607,
+        32.83071,
+        32.37073,
+        31.88349,
+        30.225,
+        29.01117,
+        27.9498,
+        27.59971,
+        27.41571,
+        27.36546,
+        27.39697,
+        28.27009,
+        29.43367,
+        29.97883,
+        30.3647,
+        30.5751,
+        31.0419,
+        30.37407
+      ]
+    },
+    "b37": {
+      "Load (MW)": 0.0
+    },
+    "b38": {
+      "Load (MW)": 0.0
+    },
+    "b39": {
+      "Load (MW)": [
+        23.03095,
+        22.61845,
+        22.17182,
+        22.09244,
+        22.29424,
+        23.21494,
+        24.66907,
+        25.48739,
+        26.02898,
+        26.87921,
+        27.00607,
+        26.77608,
+        26.00302,
+        25.94292,
+        25.67139,
+        25.72777,
+        26.81095,
+        28.95877,
+        28.7948,
+        28.59449,
+        28.19386,
+        27.76949,
+        26.325,
+        25.26779,
+        24.34338,
+        24.03845,
+        23.8782,
+        23.83443,
+        23.86188,
+        24.62233,
+        25.63577,
+        26.11059,
+        26.44668,
+        26.62993,
+        27.03649,
+        26.45484
+      ]
+    },
+    "b40": {
+      "Load (MW)": [
+        56.29787,
+        55.28954,
+        54.19779,
+        54.00374,
+        54.49702,
+        56.74763,
+        60.30218,
+        62.30252,
+        63.62641,
+        65.70473,
+        66.01484,
+        65.45265,
+        63.56293,
+        63.41603,
+        62.75228,
+        62.89011,
+        65.53788,
+        70.78809,
+        70.3873,
+        69.89764,
+        68.91833,
+        67.88098,
+        64.35001,
+        61.76571,
+        59.50603,
+        58.76067,
+        58.36894,
+        58.26194,
+        58.32904,
+        60.18792,
+        62.66523,
+        63.8259,
+        64.64743,
+        65.09538,
+        66.0892,
+        64.66738
+      ]
+    },
+    "b41": {
+      "Load (MW)": [
+        31.56093,
+        30.99565,
+        30.38361,
+        30.27482,
+        30.55136,
+        31.81307,
+        33.80577,
+        34.92717,
+        35.66935,
+        36.83447,
+        37.00832,
+        36.69315,
+        35.63376,
+        35.55141,
+        35.17931,
+        35.25657,
+        36.74093,
+        39.68423,
+        39.45955,
+        39.18504,
+        38.63603,
+        38.05449,
+        36.07501,
+        34.62623,
+        33.35944,
+        32.94159,
+        32.72198,
+        32.662,
+        32.69961,
+        33.74172,
+        35.13051,
+        35.78118,
+        36.24174,
+        36.49286,
+        37.05001,
+        36.25293
+      ]
+    },
+    "b42": {
+      "Load (MW)": [
+        81.88781,
+        80.42115,
+        78.83314,
+        78.55089,
+        79.26839,
+        82.54201,
+        87.71226,
+        90.62184,
+        92.5475,
+        95.57051,
+        96.02159,
+        95.20385,
+        92.45517,
+        92.2415,
+        91.27604,
+        91.47652,
+        95.32783,
+        102.9645,
+        102.38153,
+        101.6693,
+        100.24484,
+        98.73597,
+        93.60001,
+        89.84103,
+        86.55423,
+        85.47006,
+        84.90028,
+        84.74464,
+        84.84224,
+        87.54607,
+        91.14942,
+        92.83767,
+        94.03263,
+        94.68418,
+        96.12975,
+        94.06164
+      ]
+    },
+    "b43": {
+      "Load (MW)": [
+        15.35396,
+        15.07897,
+        14.78121,
+        14.72829,
+        14.86282,
+        15.47663,
+        16.44605,
+        16.9916,
+        17.35266,
+        17.91947,
+        18.00405,
+        17.85072,
+        17.33535,
+        17.29528,
+        17.11426,
+        17.15185,
+        17.87397,
+        19.30584,
+        19.19654,
+        19.06299,
+        18.79591,
+        18.513,
+        17.55,
+        16.84519,
+        16.22892,
+        16.02564,
+        15.9188,
+        15.88962,
+        15.90792,
+        16.41489,
+        17.09052,
+        17.40706,
+        17.63112,
+        17.75328,
+        18.02433,
+        17.63656
+      ]
+    },
+    "b44": {
+      "Load (MW)": [
+        13.64797,
+        13.40352,
+        13.13886,
+        13.09182,
+        13.2114,
+        13.757,
+        14.61871,
+        15.10364,
+        15.42458,
+        15.92842,
+        16.0036,
+        15.86731,
+        15.4092,
+        15.37358,
+        15.21267,
+        15.24609,
+        15.88797,
+        17.16075,
+        17.06359,
+        16.94488,
+        16.70747,
+        16.456,
+        15.6,
+        14.97351,
+        14.4257,
+        14.24501,
+        14.15005,
+        14.12411,
+        14.14037,
+        14.59101,
+        15.19157,
+        15.47294,
+        15.6721,
+        15.7807,
+        16.02162,
+        15.67694
+      ]
+    },
+    "b45": {
+      "Load (MW)": [
+        45.2089,
+        44.39918,
+        43.52246,
+        43.36664,
+        43.76276,
+        45.57007,
+        48.42448,
+        50.03081,
+        51.09393,
+        52.76289,
+        53.01192,
+        52.56046,
+        51.04296,
+        50.925,
+        50.39198,
+        50.50266,
+        52.62891,
+        56.84498,
+        56.52314,
+        56.12993,
+        55.34351,
+        54.51049,
+        51.67501,
+        49.59974,
+        47.78515,
+        47.18659,
+        46.87203,
+        46.7861,
+        46.83999,
+        48.33273,
+        50.32208,
+        51.25413,
+        51.91385,
+        52.27356,
+        53.07163,
+        51.92987
+      ]
+    },
+    "b46": {
+      "Load (MW)": [
+        23.88395,
+        23.45617,
+        22.993,
+        22.91068,
+        23.11995,
+        24.07475,
+        25.58274,
+        26.43137,
+        26.99302,
+        27.87473,
+        28.0063,
+        27.76779,
+        26.96609,
+        26.90377,
+        26.62218,
+        26.68065,
+        27.80395,
+        30.03131,
+        29.86128,
+        29.65355,
+        29.23808,
+        28.79799,
+        27.3,
+        26.20363,
+        25.24498,
+        24.92877,
+        24.76258,
+        24.71719,
+        24.74565,
+        25.53427,
+        26.58525,
+        27.07765,
+        27.42618,
+        27.61622,
+        28.03784,
+        27.43465
+      ]
+    },
+    "b47": {
+      "Load (MW)": [
+        29.00193,
+        28.48249,
+        27.92007,
+        27.82011,
+        28.07422,
+        29.23363,
+        31.06476,
+        32.09524,
+        32.77724,
+        33.84789,
+        34.00765,
+        33.71803,
+        32.74454,
+        32.66887,
+        32.32693,
+        32.39793,
+        33.76194,
+        36.46659,
+        36.26012,
+        36.00788,
+        35.50338,
+        34.96899,
+        33.15001,
+        31.8187,
+        30.65462,
+        30.27065,
+        30.06885,
+        30.01373,
+        30.04829,
+        31.0059,
+        32.28209,
+        32.88001,
+        33.30322,
+        33.53398,
+        34.04595,
+        33.3135
+      ]
+    },
+    "b48": {
+      "Load (MW)": [
+        17.05996,
+        16.75441,
+        16.42357,
+        16.36477,
+        16.51425,
+        17.19625,
+        18.27339,
+        18.87955,
+        19.28073,
+        19.91052,
+        20.0045,
+        19.83413,
+        19.26149,
+        19.21698,
+        19.01584,
+        19.05761,
+        19.85996,
+        21.45094,
+        21.32949,
+        21.1811,
+        20.88434,
+        20.56999,
+        19.5,
+        18.71688,
+        18.03213,
+        17.80626,
+        17.68756,
+        17.65513,
+        17.67547,
+        18.23877,
+        18.98946,
+        19.34118,
+        19.59013,
+        19.72587,
+        20.02703,
+        19.59618
+      ]
+    },
+    "b49": {
+      "Load (MW)": [
+        74.21083,
+        72.88167,
+        71.44254,
+        71.18674,
+        71.83698,
+        74.80369,
+        79.48923,
+        82.12605,
+        83.87117,
+        86.61078,
+        87.01957,
+        86.27849,
+        83.7875,
+        83.59386,
+        82.71891,
+        82.9006,
+        86.39084,
+        93.31158,
+        92.78326,
+        92.1378,
+        90.84689,
+        89.47948,
+        84.82501,
+        81.41843,
+        78.43977,
+        77.45724,
+        76.94087,
+        76.79983,
+        76.88828,
+        79.33863,
+        82.60416,
+        84.13414,
+        85.21707,
+        85.80754,
+        87.11758,
+        85.24337
+      ]
+    },
+    "b50": {
+      "Load (MW)": [
+        14.50097,
+        14.24125,
+        13.96004,
+        13.91005,
+        14.03711,
+        14.61681,
+        15.53238,
+        16.04762,
+        16.38862,
+        16.92395,
+        17.00382,
+        16.85901,
+        16.37227,
+        16.33443,
+        16.16347,
+        16.19897,
+        16.88097,
+        18.2333,
+        18.13006,
+        18.00394,
+        17.75169,
+        17.4845,
+        16.575,
+        15.90935,
+        15.32731,
+        15.13532,
+        15.03442,
+        15.00686,
+        15.02415,
+        15.50295,
+        16.14104,
+        16.44,
+        16.65161,
+        16.76699,
+        17.02298,
+        16.65675
+      ]
+    },
+    "b51": {
+      "Load (MW)": [
+        14.50097,
+        14.24125,
+        13.96004,
+        13.91005,
+        14.03711,
+        14.61681,
+        15.53238,
+        16.04762,
+        16.38862,
+        16.92395,
+        17.00382,
+        16.85901,
+        16.37227,
+        16.33443,
+        16.16347,
+        16.19897,
+        16.88097,
+        18.2333,
+        18.13006,
+        18.00394,
+        17.75169,
+        17.4845,
+        16.575,
+        15.90935,
+        15.32731,
+        15.13532,
+        15.03442,
+        15.00686,
+        15.02415,
+        15.50295,
+        16.14104,
+        16.44,
+        16.65161,
+        16.76699,
+        17.02298,
+        16.65675
+      ]
+    },
+    "b52": {
+      "Load (MW)": [
+        15.35396,
+        15.07897,
+        14.78121,
+        14.72829,
+        14.86282,
+        15.47663,
+        16.44605,
+        16.9916,
+        17.35266,
+        17.91947,
+        18.00405,
+        17.85072,
+        17.33535,
+        17.29528,
+        17.11426,
+        17.15185,
+        17.87397,
+        19.30584,
+        19.19654,
+        19.06299,
+        18.79591,
+        18.513,
+        17.55,
+        16.84519,
+        16.22892,
+        16.02564,
+        15.9188,
+        15.88962,
+        15.90792,
+        16.41489,
+        17.09052,
+        17.40706,
+        17.63112,
+        17.75328,
+        18.02433,
+        17.63656
+      ]
+    },
+    "b53": {
+      "Load (MW)": [
+        19.61896,
+        19.26757,
+        18.88711,
+        18.81948,
+        18.99139,
+        19.77569,
+        21.0144,
+        21.71148,
+        22.17284,
+        22.8971,
+        23.00517,
+        22.80926,
+        22.15072,
+        22.09953,
+        21.86822,
+        21.91625,
+        22.83896,
+        24.66858,
+        24.52891,
+        24.35827,
+        24.01699,
+        23.65549,
+        22.425,
+        21.52441,
+        20.73695,
+        20.4772,
+        20.34069,
+        20.3034,
+        20.32679,
+        20.97458,
+        21.83788,
+        22.24236,
+        22.52865,
+        22.68475,
+        23.03108,
+        22.5356
+      ]
+    },
+    "b54": {
+      "Load (MW)": [
+        96.38878,
+        94.66239,
+        92.79318,
+        92.46094,
+        93.30551,
+        97.15882,
+        103.24464,
+        106.66946,
+        108.93612,
+        112.49446,
+        113.02542,
+        112.06286,
+        108.82744,
+        108.57594,
+        107.43951,
+        107.67549,
+        112.2088,
+        121.1978,
+        120.51159,
+        119.67324,
+        117.99653,
+        116.22047,
+        110.17502,
+        105.75038,
+        101.88154,
+        100.60538,
+        99.9347,
+        99.7515,
+        99.86639,
+        103.04902,
+        107.29046,
+        109.27767,
+        110.68424,
+        111.45118,
+        113.15272,
+        110.71839
+      ]
+    },
+    "b55": {
+      "Load (MW)": [
+        53.73888,
+        52.77638,
+        51.73425,
+        51.54902,
+        52.01988,
+        54.16819,
+        57.56117,
+        59.47059,
+        60.7343,
+        62.71815,
+        63.01417,
+        62.47753,
+        60.67371,
+        60.53349,
+        59.8999,
+        60.03147,
+        62.55889,
+        67.57045,
+        67.18788,
+        66.72048,
+        65.78568,
+        64.79548,
+        61.42501,
+        58.95818,
+        56.80121,
+        56.08973,
+        55.71581,
+        55.61367,
+        55.67772,
+        57.45211,
+        59.81681,
+        60.92472,
+        61.70891,
+        62.1365,
+        63.08515,
+        61.72795
+      ]
+    },
+    "b56": {
+      "Load (MW)": [
+        71.65184,
+        70.36851,
+        68.979,
+        68.73203,
+        69.35985,
+        72.22426,
+        76.74823,
+        79.29411,
+        80.97906,
+        83.6242,
+        84.01889,
+        83.30337,
+        80.89828,
+        80.71132,
+        79.86653,
+        80.04195,
+        83.41185,
+        90.09394,
+        89.58384,
+        88.96064,
+        87.71424,
+        86.39398,
+        81.90001,
+        78.6109,
+        75.73495,
+        74.7863,
+        74.28774,
+        74.15156,
+        74.23696,
+        76.60281,
+        79.75574,
+        81.23296,
+        82.27855,
+        82.84866,
+        84.11353,
+        82.30394
+      ]
+    },
+    "b57": {
+      "Load (MW)": [
+        10.23598,
+        10.05264,
+        9.85414,
+        9.81886,
+        9.90855,
+        10.31775,
+        10.96403,
+        11.32773,
+        11.56844,
+        11.94631,
+        12.0027,
+        11.90048,
+        11.5569,
+        11.53019,
+        11.4095,
+        11.43456,
+        11.91598,
+        12.87056,
+        12.79769,
+        12.70866,
+        12.53061,
+        12.342,
+        11.7,
+        11.23013,
+        10.81928,
+        10.68376,
+        10.61253,
+        10.59308,
+        10.60528,
+        10.94326,
+        11.39368,
+        11.60471,
+        11.75408,
+        11.83552,
+        12.01622,
+        11.75771
+      ]
+    },
+    "b58": {
+      "Load (MW)": [
+        10.23598,
+        10.05264,
+        9.85414,
+        9.81886,
+        9.90855,
+        10.31775,
+        10.96403,
+        11.32773,
+        11.56844,
+        11.94631,
+        12.0027,
+        11.90048,
+        11.5569,
+        11.53019,
+        11.4095,
+        11.43456,
+        11.91598,
+        12.87056,
+        12.79769,
+        12.70866,
+        12.53061,
+        12.342,
+        11.7,
+        11.23013,
+        10.81928,
+        10.68376,
+        10.61253,
+        10.59308,
+        10.60528,
+        10.94326,
+        11.39368,
+        11.60471,
+        11.75408,
+        11.83552,
+        12.01622,
+        11.75771
+      ]
+    },
+    "b59": {
+      "Load (MW)": [
+        236.28046,
+        232.04853,
+        227.46647,
+        226.65205,
+        228.72235,
+        238.16809,
+        253.08641,
+        261.48178,
+        267.0381,
+        275.76075,
+        277.0623,
+        274.70277,
+        266.7717,
+        266.15518,
+        263.36941,
+        263.94787,
+        275.06051,
+        297.09549,
+        295.41337,
+        293.35829,
+        289.24814,
+        284.89442,
+        270.07504,
+        259.22881,
+        249.74501,
+        246.61673,
+        244.97267,
+        244.5236,
+        244.80522,
+        252.6069,
+        263.00406,
+        267.87535,
+        271.32331,
+        273.20333,
+        277.37437,
+        271.40704
+      ]
+    },
+    "b60": {
+      "Load (MW)": [
+        66.53385,
+        65.34218,
+        64.05193,
+        63.8226,
+        64.40557,
+        67.06538,
+        71.26621,
+        73.63025,
+        75.19484,
+        77.65104,
+        78.01754,
+        77.35313,
+        75.11983,
+        74.94622,
+        74.16178,
+        74.32467,
+        77.45386,
+        83.65866,
+        83.18499,
+        82.60631,
+        81.44893,
+        80.22298,
+        76.05001,
+        72.99584,
+        70.32531,
+        69.44442,
+        68.98147,
+        68.85502,
+        68.93432,
+        71.13118,
+        74.0589,
+        75.4306,
+        76.40151,
+        76.9309,
+        78.10542,
+        76.42509
+      ]
+    },
+    "b61": {
+      "Load (MW)": 0.0
+    },
+    "b62": {
+      "Load (MW)": [
+        65.68085,
+        64.50446,
+        63.23075,
+        63.00436,
+        63.57986,
+        66.20557,
+        70.35254,
+        72.68627,
+        74.23081,
+        76.65552,
+        77.01732,
+        76.36142,
+        74.15675,
+        73.98537,
+        73.21099,
+        73.37179,
+        76.46086,
+        82.58611,
+        82.11852,
+        81.54725,
+        80.40472,
+        79.19448,
+        75.07501,
+        72.05999,
+        69.4237,
+        68.55411,
+        68.0971,
+        67.97226,
+        68.05055,
+        70.21925,
+        73.10943,
+        74.46355,
+        75.422,
+        75.94461,
+        77.10407,
+        75.44528
+      ]
+    },
+    "b63": {
+      "Load (MW)": 0.0
+    },
+    "b64": {
+      "Load (MW)": 0.0
+    },
+    "b65": {
+      "Load (MW)": 0.0
+    },
+    "b66": {
+      "Load (MW)": [
+        33.26692,
+        32.67109,
+        32.02596,
+        31.9113,
+        32.20279,
+        33.53269,
+        35.63311,
+        36.81512,
+        37.59742,
+        38.82552,
+        39.00877,
+        38.67656,
+        37.55991,
+        37.47311,
+        37.08089,
+        37.16234,
+        38.72693,
+        41.82933,
+        41.5925,
+        41.30315,
+        40.72447,
+        40.11149,
+        38.02501,
+        36.49792,
+        35.16266,
+        34.72221,
+        34.49074,
+        34.42751,
+        34.46716,
+        35.56559,
+        37.02945,
+        37.7153,
+        38.20076,
+        38.46545,
+        39.05271,
+        38.21254
+      ]
+    },
+    "b67": {
+      "Load (MW)": [
+        23.88395,
+        23.45617,
+        22.993,
+        22.91068,
+        23.11995,
+        24.07475,
+        25.58274,
+        26.43137,
+        26.99302,
+        27.87473,
+        28.0063,
+        27.76779,
+        26.96609,
+        26.90377,
+        26.62218,
+        26.68065,
+        27.80395,
+        30.03131,
+        29.86128,
+        29.65355,
+        29.23808,
+        28.79799,
+        27.3,
+        26.20363,
+        25.24498,
+        24.92877,
+        24.76258,
+        24.71719,
+        24.74565,
+        25.53427,
+        26.58525,
+        27.07765,
+        27.42618,
+        27.61622,
+        28.03784,
+        27.43465
+      ]
+    },
+    "b68": {
+      "Load (MW)": 0.0
+    },
+    "b69": {
+      "Load (MW)": 0.0
+    },
+    "b70": {
+      "Load (MW)": [
+        56.29787,
+        55.28954,
+        54.19779,
+        54.00374,
+        54.49702,
+        56.74763,
+        60.30218,
+        62.30252,
+        63.62641,
+        65.70473,
+        66.01484,
+        65.45265,
+        63.56293,
+        63.41603,
+        62.75228,
+        62.89011,
+        65.53788,
+        70.78809,
+        70.3873,
+        69.89764,
+        68.91833,
+        67.88098,
+        64.35001,
+        61.76571,
+        59.50603,
+        58.76067,
+        58.36894,
+        58.26194,
+        58.32904,
+        60.18792,
+        62.66523,
+        63.8259,
+        64.64743,
+        65.09538,
+        66.0892,
+        64.66738
+      ]
+    },
+    "b71": {
+      "Load (MW)": 0.0
+    },
+    "b72": {
+      "Load (MW)": [
+        10.23598,
+        10.05264,
+        9.85414,
+        9.81886,
+        9.90855,
+        10.31775,
+        10.96403,
+        11.32773,
+        11.56844,
+        11.94631,
+        12.0027,
+        11.90048,
+        11.5569,
+        11.53019,
+        11.4095,
+        11.43456,
+        11.91598,
+        12.87056,
+        12.79769,
+        12.70866,
+        12.53061,
+        12.342,
+        11.7,
+        11.23013,
+        10.81928,
+        10.68376,
+        10.61253,
+        10.59308,
+        10.60528,
+        10.94326,
+        11.39368,
+        11.60471,
+        11.75408,
+        11.83552,
+        12.01622,
+        11.75771
+      ]
+    },
+    "b73": {
+      "Load (MW)": [
+        5.11799,
+        5.02632,
+        4.92707,
+        4.90943,
+        4.95427,
+        5.15888,
+        5.48202,
+        5.66387,
+        5.78422,
+        5.97316,
+        6.00135,
+        5.95024,
+        5.77845,
+        5.76509,
+        5.70475,
+        5.71728,
+        5.95799,
+        6.43528,
+        6.39885,
+        6.35433,
+        6.2653,
+        6.171,
+        5.85,
+        5.61506,
+        5.40964,
+        5.34188,
+        5.30627,
+        5.29654,
+        5.30264,
+        5.47163,
+        5.69684,
+        5.80235,
+        5.87704,
+        5.91776,
+        6.00811,
+        5.87885
+      ]
+    },
+    "b74": {
+      "Load (MW)": [
+        58.00387,
+        56.96498,
+        55.84014,
+        55.64021,
+        56.14845,
+        58.46726,
+        62.12952,
+        64.19047,
+        65.55448,
+        67.69578,
+        68.01529,
+        67.43606,
+        65.48908,
+        65.33773,
+        64.65386,
+        64.79587,
+        67.52388,
+        72.93319,
+        72.52025,
+        72.01575,
+        71.00676,
+        69.93798,
+        66.30001,
+        63.6374,
+        61.30925,
+        60.54129,
+        60.1377,
+        60.02745,
+        60.09659,
+        62.0118,
+        64.56417,
+        65.76001,
+        66.60644,
+        67.06796,
+        68.0919,
+        66.627
+      ]
+    },
+    "b75": {
+      "Load (MW)": [
+        40.09091,
+        39.37285,
+        38.59539,
+        38.45721,
+        38.80848,
+        40.41119,
+        42.94246,
+        44.36694,
+        45.30971,
+        46.78973,
+        47.01057,
+        46.61022,
+        45.26451,
+        45.1599,
+        44.68723,
+        44.78538,
+        46.67092,
+        50.4097,
+        50.12429,
+        49.77559,
+        49.0782,
+        48.33949,
+        45.82501,
+        43.98467,
+        42.37551,
+        41.84472,
+        41.56576,
+        41.48956,
+        41.53735,
+        42.8611,
+        44.62524,
+        45.45177,
+        46.03681,
+        46.3558,
+        47.06352,
+        46.05101
+      ]
+    },
+    "b76": {
+      "Load (MW)": [
+        58.00387,
+        56.96498,
+        55.84014,
+        55.64021,
+        56.14845,
+        58.46726,
+        62.12952,
+        64.19047,
+        65.55448,
+        67.69578,
+        68.01529,
+        67.43606,
+        65.48908,
+        65.33773,
+        64.65386,
+        64.79587,
+        67.52388,
+        72.93319,
+        72.52025,
+        72.01575,
+        71.00676,
+        69.93798,
+        66.30001,
+        63.6374,
+        61.30925,
+        60.54129,
+        60.1377,
+        60.02745,
+        60.09659,
+        62.0118,
+        64.56417,
+        65.76001,
+        66.60644,
+        67.06796,
+        68.0919,
+        66.627
+      ]
+    },
+    "b77": {
+      "Load (MW)": [
+        52.03288,
+        51.10094,
+        50.09189,
+        49.91254,
+        50.36846,
+        52.44857,
+        55.73383,
+        57.58263,
+        58.80622,
+        60.7271,
+        61.01372,
+        60.49411,
+        58.74756,
+        58.61179,
+        57.99832,
+        58.1257,
+        60.57289,
+        65.42536,
+        65.05493,
+        64.60237,
+        63.69724,
+        62.73848,
+        59.47501,
+        57.08649,
+        54.998,
+        54.3091,
+        53.94705,
+        53.84816,
+        53.91017,
+        55.62823,
+        57.91786,
+        58.9906,
+        59.7499,
+        60.16391,
+        61.08244,
+        59.76834
+      ]
+    },
+    "b78": {
+      "Load (MW)": [
+        60.56286,
+        59.47814,
+        58.30368,
+        58.09493,
+        58.62558,
+        61.04669,
+        64.87053,
+        67.02241,
+        68.44659,
+        70.68236,
+        71.01597,
+        70.41118,
+        68.37831,
+        68.22028,
+        67.50624,
+        67.65451,
+        70.50287,
+        76.15083,
+        75.71967,
+        75.19292,
+        74.13942,
+        73.02348,
+        69.22501,
+        66.44493,
+        64.01406,
+        63.21223,
+        62.79083,
+        62.67572,
+        62.74791,
+        64.74762,
+        67.41259,
+        68.66119,
+        69.54496,
+        70.02685,
+        71.09596,
+        69.56642
+      ]
+    },
+    "b79": {
+      "Load (MW)": [
+        33.26692,
+        32.67109,
+        32.02596,
+        31.9113,
+        32.20279,
+        33.53269,
+        35.63311,
+        36.81512,
+        37.59742,
+        38.82552,
+        39.00877,
+        38.67656,
+        37.55991,
+        37.47311,
+        37.08089,
+        37.16234,
+        38.72693,
+        41.82933,
+        41.5925,
+        41.30315,
+        40.72447,
+        40.11149,
+        38.02501,
+        36.49792,
+        35.16266,
+        34.72221,
+        34.49074,
+        34.42751,
+        34.46716,
+        35.56559,
+        37.02945,
+        37.7153,
+        38.20076,
+        38.46545,
+        39.05271,
+        38.21254
+      ]
+    },
+    "b80": {
+      "Load (MW)": [
+        110.88975,
+        108.90364,
+        106.75322,
+        106.371,
+        107.34262,
+        111.77564,
+        118.77702,
+        122.71708,
+        125.32474,
+        129.4184,
+        130.02924,
+        128.92188,
+        125.19971,
+        124.91037,
+        123.60297,
+        123.87445,
+        129.08977,
+        139.43109,
+        138.64165,
+        137.67718,
+        135.74822,
+        133.70496,
+        126.75002,
+        121.65973,
+        117.20885,
+        115.7407,
+        114.96912,
+        114.75837,
+        114.89054,
+        118.55197,
+        123.43151,
+        125.71767,
+        127.33585,
+        128.21817,
+        130.1757,
+        127.37514
+      ]
+    },
+    "b81": {
+      "Load (MW)": 0.0
+    },
+    "b82": {
+      "Load (MW)": [
+        46.06189,
+        45.2369,
+        44.34364,
+        44.18488,
+        44.58847,
+        46.42988,
+        49.33815,
+        50.97479,
+        52.05797,
+        53.75841,
+        54.01215,
+        53.55216,
+        52.00604,
+        51.88585,
+        51.34277,
+        51.45554,
+        53.6219,
+        57.91753,
+        57.58961,
+        57.18898,
+        56.38772,
+        55.53899,
+        52.65001,
+        50.53558,
+        48.68675,
+        48.07691,
+        47.75641,
+        47.66886,
+        47.72376,
+        49.24467,
+        51.27155,
+        52.22119,
+        52.89335,
+        53.25985,
+        54.07298,
+        52.90968
+      ]
+    },
+    "b83": {
+      "Load (MW)": [
+        17.05996,
+        16.75441,
+        16.42357,
+        16.36477,
+        16.51425,
+        17.19625,
+        18.27339,
+        18.87955,
+        19.28073,
+        19.91052,
+        20.0045,
+        19.83413,
+        19.26149,
+        19.21698,
+        19.01584,
+        19.05761,
+        19.85996,
+        21.45094,
+        21.32949,
+        21.1811,
+        20.88434,
+        20.56999,
+        19.5,
+        18.71688,
+        18.03213,
+        17.80626,
+        17.68756,
+        17.65513,
+        17.67547,
+        18.23877,
+        18.98946,
+        19.34118,
+        19.59013,
+        19.72587,
+        20.02703,
+        19.59618
+      ]
+    },
+    "b84": {
+      "Load (MW)": [
+        9.38298,
+        9.21492,
+        9.03296,
+        9.00062,
+        9.08284,
+        9.45794,
+        10.05036,
+        10.38375,
+        10.6044,
+        10.95079,
+        11.00247,
+        10.90877,
+        10.59382,
+        10.56934,
+        10.45871,
+        10.48168,
+        10.92298,
+        11.79802,
+        11.73122,
+        11.64961,
+        11.48639,
+        11.3135,
+        10.725,
+        10.29428,
+        9.91767,
+        9.79344,
+        9.72816,
+        9.71032,
+        9.72151,
+        10.03132,
+        10.4442,
+        10.63765,
+        10.77457,
+        10.84923,
+        11.01487,
+        10.7779
+      ]
+    },
+    "b85": {
+      "Load (MW)": [
+        20.47195,
+        20.10529,
+        19.70829,
+        19.63772,
+        19.8171,
+        20.6355,
+        21.92806,
+        22.65546,
+        23.13687,
+        23.89263,
+        24.0054,
+        23.80096,
+        23.11379,
+        23.06038,
+        22.81901,
+        22.86913,
+        23.83196,
+        25.74113,
+        25.59538,
+        25.41733,
+        25.06121,
+        24.68399,
+        23.4,
+        22.46026,
+        21.63856,
+        21.36751,
+        21.22507,
+        21.18616,
+        21.21056,
+        21.88652,
+        22.78736,
+        23.20942,
+        23.50816,
+        23.67105,
+        24.03244,
+        23.51541
+      ]
+    },
+    "b86": {
+      "Load (MW)": [
+        17.91296,
+        17.59213,
+        17.24475,
+        17.18301,
+        17.33996,
+        18.05606,
+        19.18706,
+        19.82353,
+        20.24477,
+        20.90605,
+        21.00472,
+        20.82584,
+        20.22457,
+        20.17783,
+        19.96663,
+        20.01049,
+        20.85296,
+        22.52348,
+        22.39596,
+        22.24016,
+        21.92856,
+        21.59849,
+        20.475,
+        19.65273,
+        18.93374,
+        18.69658,
+        18.57194,
+        18.53789,
+        18.55924,
+        19.1507,
+        19.93894,
+        20.30824,
+        20.56964,
+        20.71217,
+        21.02838,
+        20.57598
+      ]
+    },
+    "b87": {
+      "Load (MW)": 0.0
+    },
+    "b88": {
+      "Load (MW)": [
+        40.94391,
+        40.21057,
+        39.41657,
+        39.27545,
+        39.6342,
+        41.271,
+        43.85613,
+        45.31092,
+        46.27375,
+        47.78526,
+        48.0108,
+        47.60192,
+        46.22759,
+        46.12075,
+        45.63802,
+        45.73826,
+        47.66391,
+        51.48225,
+        51.19076,
+        50.83465,
+        50.12242,
+        49.36799,
+        46.80001,
+        44.92052,
+        43.27711,
+        42.73503,
+        42.45014,
+        42.37232,
+        42.42112,
+        43.77304,
+        45.57471,
+        46.41883,
+        47.01631,
+        47.34209,
+        48.06487,
+        47.03082
+      ]
+    },
+    "b89": {
+      "Load (MW)": 0.0
+    },
+    "b90": {
+      "Load (MW)": [
+        139.03868,
+        136.54841,
+        133.85211,
+        133.37287,
+        134.59113,
+        140.14945,
+        148.92811,
+        153.86834,
+        157.13794,
+        162.27077,
+        163.03666,
+        161.6482,
+        156.98118,
+        156.61839,
+        154.97911,
+        155.31951,
+        161.85871,
+        174.82514,
+        173.8353,
+        172.626,
+        170.20739,
+        167.64546,
+        158.92503,
+        152.54258,
+        146.96187,
+        145.12104,
+        144.15359,
+        143.88934,
+        144.05506,
+        148.64594,
+        154.76412,
+        157.63062,
+        159.65957,
+        160.76586,
+        163.2203,
+        159.70883
+      ]
+    },
+    "b91": {
+      "Load (MW)": [
+        8.52998,
+        8.3772,
+        8.21179,
+        8.18238,
+        8.25712,
+        8.59813,
+        9.13669,
+        9.43978,
+        9.64036,
+        9.95526,
+        10.00225,
+        9.91707,
+        9.63075,
+        9.60849,
+        9.50792,
+        9.5288,
+        9.92998,
+        10.72547,
+        10.66474,
+        10.59055,
+        10.44217,
+        10.285,
+        9.75,
+        9.35844,
+        9.01607,
+        8.90313,
+        8.84378,
+        8.82757,
+        8.83773,
+        9.11938,
+        9.49473,
+        9.67059,
+        9.79507,
+        9.86294,
+        10.01352,
+        9.79809
+      ]
+    },
+    "b92": {
+      "Load (MW)": [
+        55.44487,
+        54.45182,
+        53.37661,
+        53.1855,
+        53.67131,
+        55.88782,
+        59.38851,
+        61.35854,
+        62.66237,
+        64.7092,
+        65.01462,
+        64.46094,
+        62.59986,
+        62.45519,
+        61.80149,
+        61.93723,
+        64.54488,
+        69.71555,
+        69.32083,
+        68.83859,
+        67.87411,
+        66.85248,
+        63.37501,
+        60.82986,
+        58.60443,
+        57.87035,
+        57.48456,
+        57.37918,
+        57.44527,
+        59.27599,
+        61.71575,
+        62.85884,
+        63.66793,
+        64.10908,
+        65.08785,
+        63.68757
+      ]
+    },
+    "b93": {
+      "Load (MW)": [
+        10.23598,
+        10.05264,
+        9.85414,
+        9.81886,
+        9.90855,
+        10.31775,
+        10.96403,
+        11.32773,
+        11.56844,
+        11.94631,
+        12.0027,
+        11.90048,
+        11.5569,
+        11.53019,
+        11.4095,
+        11.43456,
+        11.91598,
+        12.87056,
+        12.79769,
+        12.70866,
+        12.53061,
+        12.342,
+        11.7,
+        11.23013,
+        10.81928,
+        10.68376,
+        10.61253,
+        10.59308,
+        10.60528,
+        10.94326,
+        11.39368,
+        11.60471,
+        11.75408,
+        11.83552,
+        12.01622,
+        11.75771
+      ]
+    },
+    "b94": {
+      "Load (MW)": [
+        25.58994,
+        25.13161,
+        24.63536,
+        24.54715,
+        24.77137,
+        25.79438,
+        27.41008,
+        28.31933,
+        28.92109,
+        29.86579,
+        30.00675,
+        29.7512,
+        28.89224,
+        28.82547,
+        28.52376,
+        28.58641,
+        29.78995,
+        32.17641,
+        31.99423,
+        31.77166,
+        31.32651,
+        30.85499,
+        29.25,
+        28.07532,
+        27.0482,
+        26.70939,
+        26.53134,
+        26.4827,
+        26.5132,
+        27.35815,
+        28.48419,
+        29.01177,
+        29.3852,
+        29.58881,
+        30.04055,
+        29.39426
+      ]
+    },
+    "b95": {
+      "Load (MW)": [
+        35.82592,
+        35.18425,
+        34.4895,
+        34.36601,
+        34.67992,
+        36.11213,
+        38.37411,
+        39.64706,
+        40.48953,
+        41.8121,
+        42.00945,
+        41.65168,
+        40.44914,
+        40.35566,
+        39.93327,
+        40.02098,
+        41.70592,
+        45.04697,
+        44.79192,
+        44.48032,
+        43.85712,
+        43.19699,
+        40.95001,
+        39.30545,
+        37.86747,
+        37.39315,
+        37.14387,
+        37.07578,
+        37.11848,
+        38.30141,
+        39.87787,
+        40.61648,
+        41.13927,
+        41.42433,
+        42.05676,
+        41.15197
+      ]
+    },
+    "b96": {
+      "Load (MW)": [
+        32.41393,
+        31.83337,
+        31.20479,
+        31.09306,
+        31.37707,
+        32.67288,
+        34.71944,
+        35.87115,
+        36.63339,
+        37.83,
+        38.00855,
+        37.68486,
+        36.59684,
+        36.51226,
+        36.1301,
+        36.20946,
+        37.73393,
+        40.75678,
+        40.52602,
+        40.2441,
+        39.68025,
+        39.08299,
+        37.05001,
+        35.56207,
+        34.26105,
+        33.8319,
+        33.60636,
+        33.54475,
+        33.58339,
+        34.65365,
+        36.07998,
+        36.74824,
+        37.22125,
+        37.47916,
+        38.05136,
+        37.23273
+      ]
+    },
+    "b97": {
+      "Load (MW)": [
+        12.79497,
+        12.5658,
+        12.31768,
+        12.27358,
+        12.38569,
+        12.89719,
+        13.70504,
+        14.15966,
+        14.46055,
+        14.93289,
+        15.00337,
+        14.8756,
+        14.44612,
+        14.41274,
+        14.26188,
+        14.29321,
+        14.89497,
+        16.0882,
+        15.99711,
+        15.88583,
+        15.66326,
+        15.4275,
+        14.625,
+        14.03766,
+        13.5241,
+        13.3547,
+        13.26567,
+        13.24135,
+        13.2566,
+        13.67907,
+        14.2421,
+        14.50589,
+        14.6926,
+        14.7944,
+        15.02027,
+        14.69713
+      ]
+    },
+    "b98": {
+      "Load (MW)": [
+        29.00193,
+        28.48249,
+        27.92007,
+        27.82011,
+        28.07422,
+        29.23363,
+        31.06476,
+        32.09524,
+        32.77724,
+        33.84789,
+        34.00765,
+        33.71803,
+        32.74454,
+        32.66887,
+        32.32693,
+        32.39793,
+        33.76194,
+        36.46659,
+        36.26012,
+        36.00788,
+        35.50338,
+        34.96899,
+        33.15001,
+        31.8187,
+        30.65462,
+        30.27065,
+        30.06885,
+        30.01373,
+        30.04829,
+        31.0059,
+        32.28209,
+        32.88001,
+        33.30322,
+        33.53398,
+        34.04595,
+        33.3135
+      ]
+    },
+    "b99": {
+      "Load (MW)": [
+        35.82592,
+        35.18425,
+        34.4895,
+        34.36601,
+        34.67992,
+        36.11213,
+        38.37411,
+        39.64706,
+        40.48953,
+        41.8121,
+        42.00945,
+        41.65168,
+        40.44914,
+        40.35566,
+        39.93327,
+        40.02098,
+        41.70592,
+        45.04697,
+        44.79192,
+        44.48032,
+        43.85712,
+        43.19699,
+        40.95001,
+        39.30545,
+        37.86747,
+        37.39315,
+        37.14387,
+        37.07578,
+        37.11848,
+        38.30141,
+        39.87787,
+        40.61648,
+        41.13927,
+        41.42433,
+        42.05676,
+        41.15197
+      ]
+    },
+    "b100": {
+      "Load (MW)": [
+        31.56093,
+        30.99565,
+        30.38361,
+        30.27482,
+        30.55136,
+        31.81307,
+        33.80577,
+        34.92717,
+        35.66935,
+        36.83447,
+        37.00832,
+        36.69315,
+        35.63376,
+        35.55141,
+        35.17931,
+        35.25657,
+        36.74093,
+        39.68423,
+        39.45955,
+        39.18504,
+        38.63603,
+        38.05449,
+        36.07501,
+        34.62623,
+        33.35944,
+        32.94159,
+        32.72198,
+        32.662,
+        32.69961,
+        33.74172,
+        35.13051,
+        35.78118,
+        36.24174,
+        36.49286,
+        37.05001,
+        36.25293
+      ]
+    },
+    "b101": {
+      "Load (MW)": [
+        18.76596,
+        18.42985,
+        18.06593,
+        18.00125,
+        18.16567,
+        18.91588,
+        20.10073,
+        20.76751,
+        21.2088,
+        21.90158,
+        22.00495,
+        21.81755,
+        21.18764,
+        21.13868,
+        20.91743,
+        20.96337,
+        21.84596,
+        23.59603,
+        23.46243,
+        23.29921,
+        22.97278,
+        22.62699,
+        21.45,
+        20.58857,
+        19.83534,
+        19.58689,
+        19.45631,
+        19.42065,
+        19.44301,
+        20.06264,
+        20.88841,
+        21.2753,
+        21.54914,
+        21.69846,
+        22.02973,
+        21.55579
+      ]
+    },
+    "b102": {
+      "Load (MW)": [
+        4.26499,
+        4.1886,
+        4.10589,
+        4.09119,
+        4.12856,
+        4.29906,
+        4.56835,
+        4.71989,
+        4.82018,
+        4.97763,
+        5.00112,
+        4.95853,
+        4.81537,
+        4.80425,
+        4.75396,
+        4.7644,
+        4.96499,
+        5.36273,
+        5.33237,
+        5.29528,
+        5.22109,
+        5.1425,
+        4.875,
+        4.67922,
+        4.50803,
+        4.45157,
+        4.42189,
+        4.41378,
+        4.41887,
+        4.55969,
+        4.74737,
+        4.8353,
+        4.89753,
+        4.93147,
+        5.00676,
+        4.89904
+      ]
+    },
+    "b103": {
+      "Load (MW)": [
+        19.61896,
+        19.26757,
+        18.88711,
+        18.81948,
+        18.99139,
+        19.77569,
+        21.0144,
+        21.71148,
+        22.17284,
+        22.8971,
+        23.00517,
+        22.80926,
+        22.15072,
+        22.09953,
+        21.86822,
+        21.91625,
+        22.83896,
+        24.66858,
+        24.52891,
+        24.35827,
+        24.01699,
+        23.65549,
+        22.425,
+        21.52441,
+        20.73695,
+        20.4772,
+        20.34069,
+        20.3034,
+        20.32679,
+        20.97458,
+        21.83788,
+        22.24236,
+        22.52865,
+        22.68475,
+        23.03108,
+        22.5356
+      ]
+    },
+    "b104": {
+      "Load (MW)": [
+        32.41393,
+        31.83337,
+        31.20479,
+        31.09306,
+        31.37707,
+        32.67288,
+        34.71944,
+        35.87115,
+        36.63339,
+        37.83,
+        38.00855,
+        37.68486,
+        36.59684,
+        36.51226,
+        36.1301,
+        36.20946,
+        37.73393,
+        40.75678,
+        40.52602,
+        40.2441,
+        39.68025,
+        39.08299,
+        37.05001,
+        35.56207,
+        34.26105,
+        33.8319,
+        33.60636,
+        33.54475,
+        33.58339,
+        34.65365,
+        36.07998,
+        36.74824,
+        37.22125,
+        37.47916,
+        38.05136,
+        37.23273
+      ]
+    },
+    "b105": {
+      "Load (MW)": [
+        26.44294,
+        25.96933,
+        25.45654,
+        25.36539,
+        25.59709,
+        26.65419,
+        28.32375,
+        29.2633,
+        29.88513,
+        30.86131,
+        31.00697,
+        30.74291,
+        29.85532,
+        29.78632,
+        29.47455,
+        29.53929,
+        30.78294,
+        33.24895,
+        33.0607,
+        32.83071,
+        32.37073,
+        31.88349,
+        30.225,
+        29.01117,
+        27.9498,
+        27.59971,
+        27.41571,
+        27.36546,
+        27.39697,
+        28.27009,
+        29.43367,
+        29.97883,
+        30.3647,
+        30.5751,
+        31.0419,
+        30.37407
+      ]
+    },
+    "b106": {
+      "Load (MW)": [
+        36.67892,
+        36.02197,
+        35.31068,
+        35.18425,
+        35.50564,
+        36.97194,
+        39.28778,
+        40.59103,
+        41.45357,
+        42.80763,
+        43.00967,
+        42.64339,
+        41.41221,
+        41.31651,
+        40.88406,
+        40.97386,
+        42.69892,
+        46.11952,
+        45.85839,
+        45.53937,
+        44.90134,
+        44.22549,
+        41.92501,
+        40.2413,
+        38.76908,
+        38.28346,
+        38.02825,
+        37.95854,
+        38.00225,
+        39.21335,
+        40.82734,
+        41.58354,
+        42.11878,
+        42.41062,
+        43.05811,
+        42.13178
+      ]
+    },
+    "b107": {
+      "Load (MW)": [
+        42.6499,
+        41.88602,
+        41.05893,
+        40.91192,
+        41.28562,
+        42.99063,
+        45.68347,
+        47.19888,
+        48.20182,
+        49.77631,
+        50.01125,
+        49.58534,
+        48.15374,
+        48.04245,
+        47.5396,
+        47.64402,
+        49.64991,
+        53.62734,
+        53.32371,
+        52.95276,
+        52.21086,
+        51.42499,
+        48.75001,
+        46.7922,
+        45.08033,
+        44.51566,
+        44.21889,
+        44.13783,
+        44.18867,
+        45.59691,
+        47.47366,
+        48.35295,
+        48.97533,
+        49.31468,
+        50.06758,
+        48.99044
+      ]
+    },
+    "b108": {
+      "Load (MW)": [
+        1.706,
+        1.67544,
+        1.64236,
+        1.63648,
+        1.65142,
+        1.71963,
+        1.82734,
+        1.88796,
+        1.92807,
+        1.99105,
+        2.00045,
+        1.98341,
+        1.92615,
+        1.9217,
+        1.90158,
+        1.90576,
+        1.986,
+        2.14509,
+        2.13295,
+        2.11811,
+        2.08843,
+        2.057,
+        1.95,
+        1.87169,
+        1.80321,
+        1.78063,
+        1.76876,
+        1.76551,
+        1.76755,
+        1.82388,
+        1.89895,
+        1.93412,
+        1.95901,
+        1.97259,
+        2.0027,
+        1.95962
+      ]
+    },
+    "b109": {
+      "Load (MW)": [
+        6.82398,
+        6.70176,
+        6.56943,
+        6.54591,
+        6.6057,
+        6.8785,
+        7.30935,
+        7.55182,
+        7.71229,
+        7.96421,
+        8.0018,
+        7.93365,
+        7.7046,
+        7.68679,
+        7.60634,
+        7.62304,
+        7.94399,
+        8.58038,
+        8.53179,
+        8.47244,
+        8.35374,
+        8.228,
+        7.8,
+        7.48675,
+        7.21285,
+        7.1225,
+        7.07502,
+        7.06205,
+        7.07019,
+        7.29551,
+        7.59579,
+        7.73647,
+        7.83605,
+        7.89035,
+        8.01081,
+        7.83847
+      ]
+    },
+    "b110": {
+      "Load (MW)": [
+        33.26692,
+        32.67109,
+        32.02596,
+        31.9113,
+        32.20279,
+        33.53269,
+        35.63311,
+        36.81512,
+        37.59742,
+        38.82552,
+        39.00877,
+        38.67656,
+        37.55991,
+        37.47311,
+        37.08089,
+        37.16234,
+        38.72693,
+        41.82933,
+        41.5925,
+        41.30315,
+        40.72447,
+        40.11149,
+        38.02501,
+        36.49792,
+        35.16266,
+        34.72221,
+        34.49074,
+        34.42751,
+        34.46716,
+        35.56559,
+        37.02945,
+        37.7153,
+        38.20076,
+        38.46545,
+        39.05271,
+        38.21254
+      ]
+    },
+    "b111": {
+      "Load (MW)": 0.0
+    },
+    "b112": {
+      "Load (MW)": [
+        58.00387,
+        56.96498,
+        55.84014,
+        55.64021,
+        56.14845,
+        58.46726,
+        62.12952,
+        64.19047,
+        65.55448,
+        67.69578,
+        68.01529,
+        67.43606,
+        65.48908,
+        65.33773,
+        64.65386,
+        64.79587,
+        67.52388,
+        72.93319,
+        72.52025,
+        72.01575,
+        71.00676,
+        69.93798,
+        66.30001,
+        63.6374,
+        61.30925,
+        60.54129,
+        60.1377,
+        60.02745,
+        60.09659,
+        62.0118,
+        64.56417,
+        65.76001,
+        66.60644,
+        67.06796,
+        68.0919,
+        66.627
+      ]
+    },
+    "b113": {
+      "Load (MW)": [
+        5.11799,
+        5.02632,
+        4.92707,
+        4.90943,
+        4.95427,
+        5.15888,
+        5.48202,
+        5.66387,
+        5.78422,
+        5.97316,
+        6.00135,
+        5.95024,
+        5.77845,
+        5.76509,
+        5.70475,
+        5.71728,
+        5.95799,
+        6.43528,
+        6.39885,
+        6.35433,
+        6.2653,
+        6.171,
+        5.85,
+        5.61506,
+        5.40964,
+        5.34188,
+        5.30627,
+        5.29654,
+        5.30264,
+        5.47163,
+        5.69684,
+        5.80235,
+        5.87704,
+        5.91776,
+        6.00811,
+        5.87885
+      ]
+    },
+    "b114": {
+      "Load (MW)": [
+        6.82398,
+        6.70176,
+        6.56943,
+        6.54591,
+        6.6057,
+        6.8785,
+        7.30935,
+        7.55182,
+        7.71229,
+        7.96421,
+        8.0018,
+        7.93365,
+        7.7046,
+        7.68679,
+        7.60634,
+        7.62304,
+        7.94399,
+        8.58038,
+        8.53179,
+        8.47244,
+        8.35374,
+        8.228,
+        7.8,
+        7.48675,
+        7.21285,
+        7.1225,
+        7.07502,
+        7.06205,
+        7.07019,
+        7.29551,
+        7.59579,
+        7.73647,
+        7.83605,
+        7.89035,
+        8.01081,
+        7.83847
+      ]
+    },
+    "b115": {
+      "Load (MW)": [
+        18.76596,
+        18.42985,
+        18.06593,
+        18.00125,
+        18.16567,
+        18.91588,
+        20.10073,
+        20.76751,
+        21.2088,
+        21.90158,
+        22.00495,
+        21.81755,
+        21.18764,
+        21.13868,
+        20.91743,
+        20.96337,
+        21.84596,
+        23.59603,
+        23.46243,
+        23.29921,
+        22.97278,
+        22.62699,
+        21.45,
+        20.58857,
+        19.83534,
+        19.58689,
+        19.45631,
+        19.42065,
+        19.44301,
+        20.06264,
+        20.88841,
+        21.2753,
+        21.54914,
+        21.69846,
+        22.02973,
+        21.55579
+      ]
+    },
+    "b116": {
+      "Load (MW)": [
+        156.95164,
+        154.14054,
+        151.09686,
+        150.55587,
+        151.93109,
+        158.20552,
+        168.11516,
+        173.69187,
+        177.38271,
+        183.17682,
+        184.04138,
+        182.47404,
+        177.20575,
+        176.79622,
+        174.94574,
+        175.32999,
+        182.71167,
+        197.34863,
+        196.23126,
+        194.86616,
+        192.13595,
+        189.24395,
+        179.40003,
+        172.19531,
+        165.8956,
+        163.81761,
+        162.72553,
+        162.42723,
+        162.6143,
+        167.79664,
+        174.70306,
+        177.93886,
+        180.2292,
+        181.47802,
+        184.24868,
+        180.28482
+      ]
+    },
+    "b117": {
+      "Load (MW)": [
+        17.05996,
+        16.75441,
+        16.42357,
+        16.36477,
+        16.51425,
+        17.19625,
+        18.27339,
+        18.87955,
+        19.28073,
+        19.91052,
+        20.0045,
+        19.83413,
+        19.26149,
+        19.21698,
+        19.01584,
+        19.05761,
+        19.85996,
+        21.45094,
+        21.32949,
+        21.1811,
+        20.88434,
+        20.56999,
+        19.5,
+        18.71688,
+        18.03213,
+        17.80626,
+        17.68756,
+        17.65513,
+        17.67547,
+        18.23877,
+        18.98946,
+        19.34118,
+        19.59013,
+        19.72587,
+        20.02703,
+        19.59618
+      ]
+    },
+    "b118": {
+      "Load (MW)": [
+        28.14894,
+        27.64477,
+        27.09889,
+        27.00187,
+        27.24851,
+        28.37382,
+        30.15109,
+        31.15126,
+        31.8132,
+        32.85236,
+        33.00742,
+        32.72632,
+        31.78147,
+        31.70802,
+        31.37614,
+        31.44505,
+        32.76894,
+        35.39405,
+        35.19365,
+        34.94882,
+        34.45916,
+        33.94049,
+        32.17501,
+        30.88285,
+        29.75302,
+        29.38033,
+        29.18447,
+        29.13097,
+        29.16452,
+        30.09396,
+        31.33261,
+        31.91295,
+        32.32372,
+        32.54769,
+        33.0446,
+        32.33369
+      ]
+    }
+  },
+  "Reserves": {
+    "r1": {
+      "Type": "Spinning",
+      "Amount (MW)": [
+        72.37,
+        71.07,
+        69.67,
+        69.42,
+        70.05,
+        72.95,
+        77.52,
+        80.09,
+        81.79,
+        84.46,
+        84.86,
+        84.14,
+        81.71,
+        81.52,
+        80.67,
+        80.84,
+        84.25,
+        90.99,
+        90.48,
+        89.85,
+        88.59,
+        87.26,
+        82.72,
+        79.4,
+        76.49,
+        75.53,
+        75.03,
+        74.89,
+        74.98,
+        77.37,
+        80.55,
+        82.05,
+        83.1,
+        83.68,
+        84.95,
+        83.13
+      ]
+    }
+  }
+}
