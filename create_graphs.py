@@ -37,8 +37,6 @@ dates = pd.date_range("2017-01-01", "2017-12-31", freq="D")
 lookahead_hours = 36
 
 for day in dates:
-    if day == pd.Timestamp("2017-12-29"):
-        continue
     gen_file = gen_dir / f"{day.date()}.json"
     with open(gen_file) as f:
         data = json.load(f)

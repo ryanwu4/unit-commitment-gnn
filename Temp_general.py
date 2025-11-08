@@ -7,7 +7,7 @@ from torch import nn, optim
 
 class HEATEncoder(nn.Module):
     def __init__(self, 
-                 hidden_dim=128, 
+                 hidden_dim=256, 
                  num_heads=4, 
                  edge_emb_dim=16, 
                  dropout=0.4, 
@@ -103,7 +103,7 @@ class HEATEncoder(nn.Module):
         x2 = self.heat2(x1, edge_index, node_type, edge_type, edge_attr)
         x2 = torch.relu(x2) + x1  
         x3 = self.heat3(x2, edge_index, node_type, edge_type, edge_attr)
-        x_out = torch.relu(x3) + x2 
+        x_out = torch.relu(x3)
         if self.dropout.p > 0:
             x_out = self.dropout(x_out)
 
@@ -173,7 +173,7 @@ class HEATTemporalFast(nn.Module):
 
 
 # --- Set device ---
-device = torch.device("cuda" if torch.backends.mps.is_available() else "cpu")
+device = torch.device("cpu" if torch.backends.mps.is_available() else "cpu")
 print("Using device:", device)
 
 graphs = torch.load("graphs/all_hetero_graphs_normalized_114.pt")
@@ -236,7 +236,7 @@ model = HEATTemporalFast(encoder=encoder, hidden_dim=hidden_dim, output_dim=outp
                          T=T, time_emb_dim=time_emb_dim).to(device)
 
 optimizer = optim.Adam(model.parameters(), lr=1e-3)
-scheduler = optim.lr_scheduler.StepLR(optimizer, step_size=10, gamma=0.5)
+scheduler = optim.lr_scheduler.StepLR(optimizer, step_size=15, gamma=0.5)
 criterion = nn.BCEWithLogitsLoss()
 
 for epoch in range(1, num_epochs + 1):
