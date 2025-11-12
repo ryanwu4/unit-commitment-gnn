@@ -162,7 +162,6 @@ class HEATTemporalFast(nn.Module):
         hour_embs = hour_embs.unsqueeze(0).expand(z_seq.size(0), -1, -1)
         z_seq = torch.cat([z_seq, hour_embs], dim=-1) 
 
-        # --- temporal attention
         attn_out, _ = self.attn(z_seq, z_seq, z_seq)
         attn_out = self.dropout(attn_out)
 
@@ -170,7 +169,6 @@ class HEATTemporalFast(nn.Module):
         return out_seq
 
 
-# --- Set device ---
 device = torch.device("cpu" if torch.backends.mps.is_available() else "cpu")
 print("Using device:", device)
 
