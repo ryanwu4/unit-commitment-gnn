@@ -17,13 +17,11 @@ class HEATEncoder(nn.Module):
         """
         super().__init__()
 
-        # Node projections
         self.node_projections = nn.ModuleDict({
             ntype: nn.Linear(feat_dim, hidden_dim)
             for ntype, feat_dim in node_feature_dims.items()
         })
 
-        # Mappings
         self.edge_type_mapping = {
             ('generator', 'produces_at', 'bus'): 0,
             ('bus', 'served_by', 'generator'): 1,
