@@ -5,18 +5,18 @@ using JSON
 using JuMP
 
 # Create directory for solutions
-solutions_dir = "case118_solutions"
+solutions_dir = "case300_solutions"
 if !isdir(solutions_dir)
     mkdir(solutions_dir)
 end
 
-# Get all available dates from the case118_data directory
-data_dir = "data/case118_data"
+# Get all available dates from the case300_data directory
+data_dir = "case300_data"
 json_files = filter(f -> endswith(f, ".json"), readdir(data_dir))
 dates = sort([replace(f, ".json" => "") for f in json_files])
 
 # Start from index
-START_INDEX = 363
+START_INDEX = 1
 dates = dates[START_INDEX:end]
 
 println("Found $(length(dates)) benchmark cases to solve (starting from index $START_INDEX)")
@@ -35,7 +35,7 @@ for (idx, date_str) in enumerate(dates)
         println("\n[$(idx + START_INDEX - 1)/$(length(dates) + START_INDEX - 1)] Processing: $date_str")
         
         # Read the benchmark instance
-        instance = UnitCommitment.read_benchmark("matpower/case118/$date_str")
+        instance = UnitCommitment.read_benchmark("matpower/case300/$date_str")
         
         # Build and solve the model
         model = UnitCommitment.build_model(
