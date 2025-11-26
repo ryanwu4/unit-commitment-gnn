@@ -92,7 +92,7 @@ class FastTemporalModel(nn.Module):
     - 'gru': Medium - Stronger
     """
     def __init__(self, encoder, hidden_dim=128, output_dim=1, T=36, 
-                 temporal_method='1d_conv', dropout=0.1):
+                 temporal_method='1d_conv', dropout=0.3):
         super().__init__()
         self.encoder = encoder
         self.hidden_dim = hidden_dim
@@ -316,7 +316,7 @@ print(f"  - Decoder: 2-layer MLP")
 print(f"  - Total parameters: {sum(p.numel() for p in model.parameters()):,}")
 print()
 
-optimizer = optim.Adam(model.parameters(), lr=1e-3)
+optimizer = optim.Adam(model.parameters(), lr=5*1e-4)
 scheduler = optim.lr_scheduler.StepLR(optimizer, step_size=15, gamma=0.5)
 criterion = nn.BCEWithLogitsLoss()
 
@@ -402,3 +402,6 @@ print(f"Test BCE Loss: {final_bce_loss:.4f}")
 print(f"Test Accuracy: {final_acc:.4f}")
 print(f"Average epoch time: {sum(epoch_times)/len(epoch_times):.2f}s")
 print(f"Total training time: {sum(epoch_times)/60:.2f} minutes")
+
+torch.save(model.state_dict(), f"trained_{TEMPORAL_METHOD}_model.pt")
+print(f"Model saved to trained_{TEMPORAL_METHOD}_model.pt")
