@@ -259,10 +259,11 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print("Using device:", device)
 
 # Load data
-graphs = torch.load("graphs/mega_train.pt")
-labels_tensor = torch.load("labels/mega_labels.pt").float()
+graphs = torch.load("graphs/mega_train_with_contingencies.pt")
+labels_tensor = torch.load("labels/mega_labels_with_contingencies.pt").float()
 num_days = len(graphs)
 print(f"Number of graphs: {num_days}")
+print(f"Labels tensor shape: {labels_tensor.shape}")
 
 graph_metadata = extract_graph_metadata(graphs)
 print(f"Example graph structure: {graph_metadata[0]}")
@@ -402,5 +403,5 @@ print(f"Test Accuracy: {final_acc:.4f}")
 print(f"Average epoch time: {sum(epoch_times)/len(epoch_times):.2f}s")
 print(f"Total training time: {sum(epoch_times)/60:.2f} minutes")
 
-torch.save(model.state_dict(), f"trained_{TEMPORAL_METHOD}_model.pt")
-print(f"\nModel saved to trained_{TEMPORAL_METHOD}_model.pt")
+torch.save(model.state_dict(), f"trained_{TEMPORAL_METHOD}_model_conts_case.pt")
+print(f"\nModel saved to trained_{TEMPORAL_METHOD}_model_conts_case.pt")
